@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1665862387441779375
-    second: HydroBase
+    second: 5-tiles_0
   - first:
       213: -5571283583525768926
-    second: PyroBase
+    second: 5-tiles_1
   - first:
       213: 2514124792224024109
-    second: DendroBase
+    second: 5-tiles_2
   - first:
       213: -7446715900024136984
-    second: PhotoBase
+    second: 5-tiles_3
   - first:
       213: -350300651375241920
-    second: SkotoBase
+    second: 5-tiles_4
   - first:
       213: 5011115001937118500
-    second: UI_Score
+    second: 5-tiles_5
   - first:
       213: -6665963565014349994
     second: 5-tiles_6
   - first:
       213: -101691946209824069
-    second: DropText
+    second: 5-tiles_7
   - first:
       213: -5253741208918867948
-    second: CrushText
+    second: 5-tiles_8
   - first:
       213: -3623799726301281661
     second: 5-tiles_9
@@ -43,7 +43,7 @@ TextureImporter:
     second: 5-tiles_12
   - first:
       213: 5312402214031769025
-    second: IsText
+    second: 5-tiles_13
   - first:
       213: -8147055582555136195
     second: 5-tiles_14
@@ -202,16 +202,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HydroBase
+      name: 5-tiles_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 952
-        width: 128
-        height: 128
+        x: 5
+        y: 957
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -223,16 +223,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PyroBase
+      name: 5-tiles_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 952
-        width: 128
-        height: 128
+        x: 133
+        y: 957
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -244,16 +244,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DendroBase
+      name: 5-tiles_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 952
-        width: 128
-        height: 128
+        x: 261
+        y: 957
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -265,16 +265,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PhotoBase
+      name: 5-tiles_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 952
-        width: 128
-        height: 128
+        x: 389
+        y: 957
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -286,16 +286,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkotoBase
+      name: 5-tiles_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 952
-        width: 128
-        height: 128
+        x: 517
+        y: 957
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -307,16 +307,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Score
+      name: 5-tiles_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 1016
-        width: 128
-        height: 64
+        x: 645
+        y: 1020
+        width: 118
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -328,16 +328,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DropText
+      name: 5-tiles_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 824
-        width: 128
-        height: 128
+        x: 133
+        y: 829
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -349,16 +349,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CrushText
+      name: 5-tiles_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 824
-        width: 128
-        height: 128
+        x: 5
+        y: 701
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -370,16 +370,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IsText
+      name: 5-tiles_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 696
-        width: 128
-        height: 128
+        x: 5
+        y: 445
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -391,148 +391,148 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DirLeftText
+      name: 5-tiles_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 568
-        width: 128
-        height: 128
+        x: 5
+        y: 829
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b759702e8f534d040800000000000000
-      internalID: 4671418056550356347
+      spriteID: 6578f95947dbd73a0800000000000000
+      internalID: -6665963565014349994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DirRightText
+      name: 5-tiles_9
       rect:
         serializedVersion: 2
-        x: 128
-        y: 568
-        width: 128
-        height: 128
+        x: 5
+        y: 573
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae6941b69bbf319b0800000000000000
-      internalID: -5110464378351347990
+      spriteID: 38287a0495da5bdc0800000000000000
+      internalID: -3623799726301281661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DirUpText
+      name: 5-tiles_10
       rect:
         serializedVersion: 2
-        x: 256
-        y: 568
-        width: 128
-        height: 128
+        x: 133
+        y: 573
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a97d3ec5db11d48f0800000000000000
-      internalID: -554767674091776102
+      spriteID: fdc4e78f495138280800000000000000
+      internalID: -9042359897261454113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DirDownText
+      name: 5-tiles_11
       rect:
         serializedVersion: 2
-        x: 384
-        y: 568
-        width: 128
-        height: 128
+        x: 261
+        y: 573
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78263e0ab41149330800000000000000
-      internalID: 3716614609006977671
+      spriteID: a0099ec65e1f43e70800000000000000
+      internalID: 9094159515244924938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Num3Text
+      name: 5-tiles_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 440
-        width: 128
-        height: 128
+        x: 389
+        y: 573
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43207505c20ad6d80800000000000000
-      internalID: -8255766429713366476
+      spriteID: 2af613045f2c35000800000000000000
+      internalID: 23576781666742178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Num4Text
+      name: 5-tiles_14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 440
-        width: 128
-        height: 128
+        x: 133
+        y: 445
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f60665e66642b0740800000000000000
-      internalID: 5119225423793119343
+      spriteID: d3f1074dc18dfee80800000000000000
+      internalID: -8147055582555136195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Num5Text
+      name: 5-tiles_15
       rect:
         serializedVersion: 2
-        x: 256
-        y: 440
-        width: 128
-        height: 128
+        x: 261
+        y: 445
+        width: 118
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4459f9612ef14870800000000000000
-      internalID: 8665486577502868556
+      spriteID: 02cb3ce9fed21e050800000000000000
+      internalID: 5827989899978193952
       vertices: []
       indices: 
       edges: []
