@@ -6,6 +6,7 @@
 		public readonly int Y;
 
 		public readonly int TypeId;
+		public readonly int TextId;
 
 		public TileData(int x, int y, int typeId)
 		{
@@ -13,6 +14,7 @@
 			Y = y;
 
 			TypeId = typeId;
+			TextId = 0;
 		}
 	}
 }
