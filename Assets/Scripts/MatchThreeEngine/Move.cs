@@ -1,4 +1,4 @@
-﻿namespace MatchThreeEngine
+﻿namespace MatchEngine
 {
 	public sealed class Move
 	{

@@ -8,241 +8,321 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
-namespace MatchThreeEngine
+namespace MatchEngine
 {
-	public sealed class Board : MonoBehaviour
-	{
-		[SerializeField] private TileTypeAsset[] tileTypes;
+    public class LoopCounter
+    {
+        private int count = 20000;
+        public string info;
+
+        public LoopCounter(string _info)
+        {
+            info = _info;
+        }
+        public bool Count
+        {
+            get
+            {
+                if (count > 0)
+                {
+                    --count;
+                    return true;
+                }
+                else
+                {
+                    Debug.LogError("DeathLoop detected with info"+info);
+                    return false;
+                }
+            }
+        }
+    }
+    public sealed class Board : MonoBehaviour
+    {
+        [SerializeField] private TileTypeAsset[] tileTypes;
+
+        [SerializeField] private TileTypeAsset[] textTypes;
+
+        [SerializeField] private Row[] rows;
+
+        [SerializeField] private AudioClip matchSound;
+
+        [SerializeField] private AudioSource audioSource;
+
+        [SerializeField] private float tweenDuration;
+
+        [SerializeField] private Transform swappingOverlay;
+
+        [SerializeField] private bool ensureNoStartingMatches;
+
+        private readonly List<Tile> _selection = new List<Tile>();
+
+        private bool _isSwapping;
+        private bool _isMatching;
+        private bool _isShuffling;
+        private bool _isContinue =false;
+
+        public event Action<TileTypeAsset, int> OnMatch;
+
+        private TileData[,] Matrix
+        {
+            get
+            {
+                var width = rows.Max(row => row.tiles.Length);
+                var height = rows.Length;
+
+                var data = new TileData[width, height];
+
+                for (var y = 0; y < height; y++)
+                    for (var x = 0; x < width; x++)
+                        data[x, y] = GetTile(x, y).Data;
+
+                return data;
+            }
+        }
+
+        private void Start()
+        {
+            for (var y = 0; y < rows.Length; y++)
+            {
+                for (var x = 0; x < rows.Max(row => row.tiles.Length); x++)
+                {
+                    var tile = GetTile(x, y);
+
+                    tile.x = x;
+                    tile.y = y;
+
+                    Generate(tile);
+                    //tile.Type = tileTypes[Random.Range(0, tileTypes.Length)];
+
+                    tile.button.onClick.AddListener(() => Select(tile));
+                }
+            }
+
+            if (ensureNoStartingMatches) StartCoroutine(EnsureNoStartingMatches());
+
+            OnMatch += (type, count) => Debug.Log($"Matched {count}x {type.name}.");
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                var bestMove = TileDataMatrixUtility.FindBestMove(Matrix);
+
+                if (bestMove != null)
+                {
+                    Select(GetTile(bestMove.X1, bestMove.Y1));
+                    Select(GetTile(bestMove.X2, bestMove.Y2));
+                }
+            }
+        }
+
+        private IEnumerator EnsureNoStartingMatches()
+        {
+            var wait = new WaitForEndOfFrame();
+            var matches = TileDataMatrixUtility.FindAllMatches(Matrix);
+
+            LoopCounter counter = new LoopCounter("EnsureNoStartingMatches") ;
+            while (TileDataMatrixUtility.FindBestMatch(Matrix) != null && counter.Count)
+            {
+                foreach (var match in matches)
+                {
+                    foreach (var tile in match.Tiles)
+                    {
+                        Generate(GetTile(tile));
+                    }
+                }
+                matches.Clear();
+                matches = TileDataMatrixUtility.FindAllMatches(Matrix);
+                //Shuffle();
+            }
+            yield return wait;
+        }
+
+        private Tile GetTile(int x, int y) => rows[y].tiles[x];
+        private Tile GetTile(TileData tileData) => rows[tileData.Y].tiles[tileData.X];
+
+        private Tile[] GetTiles(IList<TileData> tileData)
+        {
+            var length = tileData.Count;
+
+            var tiles = new Tile[length];
+
+            for (var i = 0; i < length; i++) tiles[i] = GetTile(tileData[i].X, tileData[i].Y);
+
+            return tiles;
+        }
+
+        private async void Select(Tile tile)
+        {
+            if (_isSwapping || _isMatching || _isShuffling) return;
+
+            if (!_selection.Contains(tile))
+            {
+                if (_selection.Count > 0)
+                {
+                    if (Math.Abs(tile.x - _selection[0].x) == 1 && Math.Abs(tile.y - _selection[0].y) == 0
+                        || Math.Abs(tile.y - _selection[0].y) == 1 && Math.Abs(tile.x - _selection[0].x) == 0)
+                        _selection.Add(tile);
+                }
+                else
+                {
+                    _selection.Add(tile);
+                }
+            }
+
+            if (_selection.Count < 2) return;
+
+            await SwapAsync(_selection[0], _selection[1]);
 
-		[SerializeField] private Row[] rows;
+            if (!await TryMatchAsync()) await SwapAsync(_selection[0], _selection[1]);
+
+
+
+            var matrix = Matrix;
+            var count = new LoopCounter("Selection");
+            while (TileDataMatrixUtility.FindBestMove(matrix) == null || TileDataMatrixUtility.FindBestMatch(matrix) != null)
+            {
+                Shuffle();
+                
+                matrix = Matrix;
+                if (count.Count) break;
+            }
 
-		[SerializeField] private AudioClip matchSound;
+            _selection.Clear();
+        }
 
-		[SerializeField] private AudioSource audioSource;
+        private async Task SwapAsync(Tile tile1, Tile tile2)
+        {
+            _isSwapping = true;
 
-		[SerializeField] private float tweenDuration;
+            var icon1 = tile1.icon;
+            var icon2 = tile2.icon;
+            var text1 = tile1.text;
+            var text2 = tile2.text;
 
-		[SerializeField] private Transform swappingOverlay;
+            var icon1Transform = icon1.transform;
+            var icon2Transform = icon2.transform;
+            var text1Transform = text1.transform;
+            var text2Transform = text2.transform;
 
-		[SerializeField] private bool ensureNoStartingMatches;
+            icon1Transform.SetParent(swappingOverlay);
+            icon2Transform.SetParent(swappingOverlay);
+            text1Transform.SetParent(swappingOverlay);
+            text2Transform.SetParent(swappingOverlay);
 
-		private readonly List<Tile> _selection = new List<Tile>();
+            icon1Transform.SetAsLastSibling();
+            icon2Transform.SetAsLastSibling();
+            text1Transform.SetAsLastSibling();
+            text2Transform.SetAsLastSibling();
 
-		private bool _isSwapping;
-		private bool _isMatching;
-		private bool _isShuffling;
+            var sequence = DOTween.Sequence();
 
-		public event Action<TileTypeAsset, int> OnMatch;
+            sequence.Join(icon1Transform.DOMove(icon2Transform.position, tweenDuration).SetEase(Ease.OutBack))
+                    .Join(icon2Transform.DOMove(icon1Transform.position, tweenDuration).SetEase(Ease.OutBack));
+            sequence.Join(text1Transform.DOMove(text2Transform.position, tweenDuration).SetEase(Ease.OutBack))
+                    .Join(text2Transform.DOMove(text1Transform.position, tweenDuration).SetEase(Ease.OutBack));
 
-		private TileData[,] Matrix
-		{
-			get
-			{
-				var width = rows.Max(row => row.tiles.Length);
-				var height = rows.Length;
+            await sequence.Play()
+                          .AsyncWaitForCompletion();
 
-				var data = new TileData[width, height];
+            icon1Transform.SetParent(tile2.transform);
+            icon2Transform.SetParent(tile1.transform);
+            text1Transform.SetParent(tile2.transform);
+            text2Transform.SetParent(tile1.transform);
 
-				for (var y = 0; y < height; y++)
-					for (var x = 0; x < width; x++)
-						data[x, y] = GetTile(x, y).Data;
+            tile1.icon = icon2;
+            tile2.icon = icon1;
+            tile1.text = text2;
+            tile2.text = text1;
 
-				return data;
-			}
-		}
+            var tile1Item = tile1.Type;
+            var tile1Text = tile1.Text;
 
-		private void Start()
-		{
-			for (var y = 0; y < rows.Length; y++)
-			{
-				for (var x = 0; x < rows.Max(row => row.tiles.Length); x++)
-				{
-					var tile = GetTile(x, y);
+            tile1.Type = tile2.Type;
+            tile1.Text = tile2.Text;
 
-					tile.x = x;
-					tile.y = y;
+            tile2.Type = tile1Item;
+            tile2.Text = tile1Text;
 
-					tile.Type = tileTypes[Random.Range(0, tileTypes.Length)];
+            _isSwapping = false;
+        }
 
-					tile.button.onClick.AddListener(() => Select(tile));
-				}
-			}
+        private async Task<bool> TryMatchAsync()
+        {
+            var didMatch = false;
 
-			if (ensureNoStartingMatches) StartCoroutine(EnsureNoStartingMatches());
+            _isMatching = true;
 
-			OnMatch += (type, count) => Debug.Log($"Matched {count}x {type.name}.");
-		}
+            var matches = TileDataMatrixUtility.FindAllMatches(Matrix);
 
-		private void Update()
-		{
-			if (Input.GetKeyDown(KeyCode.Space))
-			{
-				var bestMove = TileDataMatrixUtility.FindBestMove(Matrix);
+            var c = new LoopCounter("TryMatchAsync");
+            while (matches.Count != 0 && c.Count)
+            {
+                didMatch = true;
 
-				if (bestMove != null)
-				{
-					Select(GetTile(bestMove.X1, bestMove.Y1));
-					Select(GetTile(bestMove.X2, bestMove.Y2));
-				}
-			}
-		}
+                var tiles = new List<Tile>();
 
-		private IEnumerator EnsureNoStartingMatches()
-		{
-			var wait = new WaitForEndOfFrame();
+                foreach (var match in matches)
 
-			while (TileDataMatrixUtility.FindAllMatches(Matrix).Count != 0)
-			{
-				Shuffle();
+                    foreach (var tile in match.Tiles)
 
-				yield return wait;
-			}
-		}
+                        if (!tiles.Contains(GetTile(tile)))
 
-		private Tile GetTile(int x, int y) => rows[y].tiles[x];
+                            tiles.Add(GetTile(tile));
 
-		private Tile[] GetTiles(IList<TileData> tileData)
-		{
-			var length = tileData.Count;
+                var deflateSequence = DOTween.Sequence();
 
-			var tiles = new Tile[length];
+                foreach (var tile in tiles)
+                {
+                    deflateSequence.Join(tile.icon.transform.DOScale(Vector3.zero, tweenDuration).SetEase(Ease.InBack));
+                    deflateSequence.Join(tile.text.transform.DOScale(Vector3.zero, tweenDuration).SetEase(Ease.InBack));
+                }
 
-			for (var i = 0; i < length; i++) tiles[i] = GetTile(tileData[i].X, tileData[i].Y);
+                audioSource.PlayOneShot(matchSound);
 
-			return tiles;
-		}
+                await deflateSequence.Play()
+                                     .AsyncWaitForCompletion();
 
-		private async void Select(Tile tile)
-		{
-			if (_isSwapping || _isMatching || _isShuffling) return;
+                var inflateSequence = DOTween.Sequence();
 
-			if (!_selection.Contains(tile))
-			{
-				if (_selection.Count > 0)
-				{
-					if (Math.Abs(tile.x - _selection[0].x) == 1 && Math.Abs(tile.y - _selection[0].y) == 0
-					    || Math.Abs(tile.y - _selection[0].y) == 1 && Math.Abs(tile.x - _selection[0].x) == 0)
-						_selection.Add(tile);
-				}
-				else
-				{
-					_selection.Add(tile);
-				}
-			}
+                foreach (var tile in tiles)
+                {
+                    Generate(tile);
 
-			if (_selection.Count < 2) return;
+                    inflateSequence.Join(tile.icon.transform.DOScale(Vector3.one, tweenDuration).SetEase(Ease.OutBack));
+                    inflateSequence.Join(tile.text.transform.DOScale(0.8f * Vector3.one, tweenDuration).SetEase(Ease.OutBack));
+                }
 
-			await SwapAsync(_selection[0], _selection[1]);
+                await inflateSequence.Play()
+                                     .AsyncWaitForCompletion();
 
-			if (!await TryMatchAsync()) await SwapAsync(_selection[0], _selection[1]);
+                foreach (var match in matches)
+                    OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId), match.Tiles.Length);
 
+                matches = TileDataMatrixUtility.FindAllMatches(Matrix);
+            }
 
+            _isMatching = false;
 
-			var matrix = Matrix;
+            return didMatch;
+        }
 
-			while (TileDataMatrixUtility.FindBestMove(matrix) == null || TileDataMatrixUtility.FindBestMatch(matrix) != null)
-			{
-				Shuffle();
+        private void Generate(Tile tile)
+        {
+            tile.Type = tileTypes[Random.Range(0, tileTypes.Length)];
+            tile.Text = textTypes[Random.Range(0, textTypes.Length)];
+        }
 
-				matrix = Matrix;
-			}
+        private void Shuffle()
+        {
+            _isShuffling = true;
 
-			_selection.Clear();
-		}
+            foreach (var row in rows)
+                foreach (var tile in row.tiles)
+                    Generate(tile);
 
-		private async Task SwapAsync(Tile tile1, Tile tile2)
-		{
-			_isSwapping = true;
-
-			var icon1 = tile1.icon;
-			var icon2 = tile2.icon;
-
-			var icon1Transform = icon1.transform;
-			var icon2Transform = icon2.transform;
-
-			icon1Transform.SetParent(swappingOverlay);
-			icon2Transform.SetParent(swappingOverlay);
-
-			icon1Transform.SetAsLastSibling();
-			icon2Transform.SetAsLastSibling();
-
-			var sequence = DOTween.Sequence();
-
-			sequence.Join(icon1Transform.DOMove(icon2Transform.position, tweenDuration).SetEase(Ease.OutBack))
-			        .Join(icon2Transform.DOMove(icon1Transform.position, tweenDuration).SetEase(Ease.OutBack));
-
-			await sequence.Play()
-			              .AsyncWaitForCompletion();
-
-			icon1Transform.SetParent(tile2.transform);
-			icon2Transform.SetParent(tile1.transform);
-
-			tile1.icon = icon2;
-			tile2.icon = icon1;
-
-			var tile1Item = tile1.Type;
-
-			tile1.Type = tile2.Type;
-
-			tile2.Type = tile1Item;
-
-			_isSwapping = false;
-		}
-
-		private async Task<bool> TryMatchAsync()
-		{
-			var didMatch = false;
-
-			_isMatching = true;
-
-			var match = TileDataMatrixUtility.FindBestMatch(Matrix);
-
-			while (match != null)
-			{
-				didMatch = true;
-
-				var tiles = GetTiles(match.Tiles);
-
-				var deflateSequence = DOTween.Sequence();
-
-				foreach (var tile in tiles) deflateSequence.Join(tile.icon.transform.DOScale(Vector3.zero, tweenDuration).SetEase(Ease.InBack));
-
-				audioSource.PlayOneShot(matchSound);
-
-				await deflateSequence.Play()
-				                     .AsyncWaitForCompletion();
-
-				var inflateSequence = DOTween.Sequence();
-
-				foreach (var tile in tiles)
-				{
-					tile.Type = tileTypes[Random.Range(0, tileTypes.Length)];
-
-					inflateSequence.Join(tile.icon.transform.DOScale(Vector3.one, tweenDuration).SetEase(Ease.OutBack));
-				}
-
-				await inflateSequence.Play()
-				                     .AsyncWaitForCompletion();
-
-				OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId), match.Tiles.Length);
-
-				match = TileDataMatrixUtility.FindBestMatch(Matrix);
-			}
-
-			_isMatching = false;
-
-			return didMatch;
-		}
-
-		private void Shuffle()
-		{
-			_isShuffling = true;
-
-			foreach (var row in rows)
-				foreach (var tile in row.tiles)
-					tile.Type = tileTypes[Random.Range(0, tileTypes.Length)];
-
-			_isShuffling = false;
-		}
-	}
+            _isShuffling = false;
+        }
+    }
 }

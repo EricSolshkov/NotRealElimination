@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace MatchThreeEngine
+namespace MatchEngine
 {
 	public sealed class Tile : MonoBehaviour
 	{
@@ -9,10 +9,12 @@ namespace MatchThreeEngine
 		public int y;
 
 		public Image icon;
+		public Image text;
 
 		public Button button;
 
 		private TileTypeAsset _type;
+		private TileTypeAsset _text;
 
 		public TileTypeAsset Type
 		{
@@ -27,7 +29,20 @@ namespace MatchThreeEngine
 				icon.sprite = _type.sprite;
 			}
 		}
+		public TileTypeAsset Text
+		{
+			get => _text;
 
-		public TileData Data => new TileData(x, y, _type.id);
+			set
+			{
+				if (_text == value) return;
+
+				_text = value;
+
+				text.sprite = _text.sprite;
+			}
+		}
+
+		public TileData Data => new TileData(x, y, _type.id, _text.id);
 	}
 }

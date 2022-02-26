@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d742e6c1f64287bcbf4ece0ac2dc56, type: 3}
   m_Name: Tile_Photo
   m_EditorClassIdentifier: 
-  id: 11
+  id: 4
   value: 0
   sprite: {fileID: -7446715900024136984, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

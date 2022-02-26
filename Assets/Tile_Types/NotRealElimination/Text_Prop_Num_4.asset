@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d742e6c1f64287bcbf4ece0ac2dc56, type: 3}
   m_Name: Text_Prop_Num_4
   m_EditorClassIdentifier: 
-  id: 7
+  id: 234
   value: 0
   sprite: {fileID: -8147055582555136195, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

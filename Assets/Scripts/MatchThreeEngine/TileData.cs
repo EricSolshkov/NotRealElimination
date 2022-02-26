@@ -1,4 +1,4 @@
-﻿namespace MatchThreeEngine
+﻿namespace MatchEngine
 {
 	public readonly struct TileData
 	{
@@ -8,13 +8,13 @@
 		public readonly int TypeId;
 		public readonly int TextId;
 
-		public TileData(int x, int y, int typeId)
+		public TileData(int x, int y, int typeId, int textId)
 		{
 			X = x;
 			Y = y;
 
 			TypeId = typeId;
-			TextId = 0;
+			TextId = textId;
 		}
 	}
 }

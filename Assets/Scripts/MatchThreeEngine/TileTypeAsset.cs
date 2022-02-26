@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MatchThreeEngine
+namespace MatchEngine
 {
 	[CreateAssetMenu(menuName = "Match 3 Engine/Tile Type Asset")]
 	public sealed class TileTypeAsset : ScriptableObject

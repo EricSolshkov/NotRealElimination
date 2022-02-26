@@ -1,16 +1,30 @@
-﻿namespace MatchThreeEngine
+﻿namespace MatchEngine
 {
+	public enum MatchType
+	{
+		tile,
+		text,
+		both
+	};
 	public sealed class Match
 	{
+		
+
 		public readonly int TypeId;
+
+		public readonly int TextId;
 
 		public readonly int Score;
 
 		public readonly TileData[] Tiles;
 
+		public readonly MatchType matchType;
+
 		public Match(TileData origin, TileData[] horizontal, TileData[] vertical)
 		{
 			TypeId = origin.TypeId;
+
+			TextId = origin.TextId;
 
 			if (horizontal.Length >= 2 && vertical.Length >= 2)
 			{

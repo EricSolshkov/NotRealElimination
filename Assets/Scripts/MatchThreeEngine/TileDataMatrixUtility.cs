@@ -1,225 +1,363 @@
 ﻿using System.Collections.Generic;
 
-namespace MatchThreeEngine
+namespace MatchEngine
 {
-	public static class TileDataMatrixUtility
-	{
-		public static void Swap(int x1, int y1, int x2, int y2, TileData[,] tiles)
-		{
-			var tile1 = tiles[x1, y1];
+    public static class TileDataMatrixUtility
+    {
+        public static void Swap(int x1, int y1, int x2, int y2, TileData[,] tiles)
+        {
+            var tile1 = tiles[x1, y1];
 
-			tiles[x1, y1] = tiles[x2, y2];
+            tiles[x1, y1] = tiles[x2, y2];
 
-			tiles[x2, y2] = tile1;
-		}
+            tiles[x2, y2] = tile1;
+        }
 
-		public static (TileData[], TileData[]) GetConnections(int originX, int originY, TileData[,] tiles)
-		{
-			var origin = tiles[originX, originY];
 
-			var width = tiles.GetLength(0);
-			var height = tiles.GetLength(1);
+        public static (TileData[], TileData[]) GetTileConnections(int originX, int originY, TileData[,] tiles)
+        {
+            var origin = tiles[originX, originY];
 
-			var horizontalConnections = new List<TileData>();
-			var verticalConnections = new List<TileData>();
+            var width = tiles.GetLength(0);
+            var height = tiles.GetLength(1);
 
-			for (var x = originX - 1; x >= 0; x--)
-			{
-				var other = tiles[x, originY];
+            var horizontalConnections = new List<TileData>();
+            var verticalConnections = new List<TileData>();
 
-				if (other.TypeId != origin.TypeId) break;
+            // Find type connections;
+            for (var x = originX - 1; x >= 0; x--)
+            {
+                var other = tiles[x, originY];
 
-				horizontalConnections.Add(other);
-			}
+                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                else break;
+            }
 
-			for (var x = originX + 1; x < width; x++)
-			{
-				var other = tiles[x, originY];
+            for (var x = originX + 1; x < width; x++)
+            {
+                var other = tiles[x, originY];
 
-				if (other.TypeId != origin.TypeId) break;
+                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                else break;
+            }
 
-				horizontalConnections.Add(other);
-			}
+            for (var y = originY - 1; y >= 0; y--)
+            {
+                var other = tiles[originX, y];
 
-			for (var y = originY - 1; y >= 0; y--)
-			{
-				var other = tiles[originX, y];
+                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                else break;
+            }
 
-				if (other.TypeId != origin.TypeId) break;
+            for (var y = originY + 1; y < height; y++)
+            {
+                var other = tiles[originX, y];
 
-				verticalConnections.Add(other);
-			}
+                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                else break;
+            }
 
-			for (var y = originY + 1; y < height; y++)
-			{
-				var other = tiles[originX, y];
+            return (horizontalConnections.ToArray(), verticalConnections.ToArray());
+        }
 
-				if (other.TypeId != origin.TypeId) break;
+        public static (TileData[], TileData[]) GetTextConnections(int originX, int originY, TileData[,] tiles)
+        {
+            var origin = tiles[originX, originY];
 
-				verticalConnections.Add(other);
-			}
+            var width = tiles.GetLength(0);
+            var height = tiles.GetLength(1);
 
-			return (horizontalConnections.ToArray(), verticalConnections.ToArray());
-		}
+            var horizontalConnections = new List<TileData>();
+            var verticalConnections = new List<TileData>();
 
-		public static Match FindBestMatch(TileData[,] tiles)
-		{
-			var bestMatch = default(Match);
+            // Find text connections
+            for (var x = originX - 1; x >= 0; x--)
+            {
+                var other = tiles[x, originY];
 
-			for (var y = 0; y < tiles.GetLength(1); y++)
-			{
-				for (var x = 0; x < tiles.GetLength(0); x++)
-				{
-					var tile = tiles[x, y];
+                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                else break;
+            }
 
-					var (h, v) = GetConnections(x, y, tiles);
+            for (var x = originX + 1; x < width; x++)
+            {
+                var other = tiles[x, originY];
 
-					var match = new Match(tile, h, v);
+                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                else break;
+            }
 
-					if (match.Score < 0) continue;
+            for (var y = originY - 1; y >= 0; y--)
+            {
+                var other = tiles[originX, y];
 
-					if (bestMatch == null)
-					{
-						bestMatch = match;
-					}
-					else if (match.Score > bestMatch.Score) bestMatch = match;
-				}
-			}
+                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                else break;
+            }
 
-			return bestMatch;
-		}
+            for (var y = originY + 1; y < height; y++)
+            {
+                var other = tiles[originX, y];
 
-		public static List<Match> FindAllMatches(TileData[,] tiles)
-		{
-			var matches = new List<Match>();
-			var height = tiles.GetLength(1);
-			var width = tiles.GetLength(0);
+                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                else break;
+            }
 
-			//Find horizontal matches;
-			for (var y = 0; y < height; y++)
-			{
-				for (var x = 0; x < width; x++)
-				{
-					var tile = tiles[x, y];
+            return (horizontalConnections.ToArray(), verticalConnections.ToArray());
+        }
+        
+        /*public static Match FindBestMatch(TileData[,] tiles)
+        {
+            var bestMatch = default(Match);
 
-					var (h, v) = GetConnections(x, y, tiles);
+            for (var y = 0; y < tiles.GetLength(1); y++)
+            {
+                for (var x = 0; x < tiles.GetLength(0); x++)
+                {
+                    var tile = tiles[x, y];
+                }
+            }
+            return bestMatch;
+        }*/
 
-					var match = new Match(tile, h, new TileData[0]);
+        /*public static List<Match> FindAllMatches(TileData[,] tiles)
+        {
+            var matches = new List<Match>(); 
 
-					if (match.Score > -1) 
-					{
-						x = match.Tiles[match.Tiles.Length - 1].X + 1;
+            for (var y = 0; y < tiles.GetLength(1); y++)
+            {
+                bool isConnectionDetected = false;
+                for (var x = 0; x < tiles.GetLength(0); x++)
+                {
+                    var tile = tiles[x, y];
+                    if (!isConnectionDetected)
+                    {
 
-						matches.Add(match);
-					}
-				}
-			}
-			// Find vertical matches
-            for (var x = 0; x < width; x++) 
-			{
-				for (var y = 0; y < height; y++)
-				{
-					var tile = tiles[x, y];
+                    }
 
-					var (h, v) = GetConnections(x, y, tiles);
+                }
+            }
+            return matches;
+        }*/
 
-					var match = new Match(tile, h, v);
+        public static Match FindBestMatch(TileData[,] tiles)
+        {
+            var bestMatch = default(Match);
 
-					if (match.Score > -1)
-					{
-						y = match.Tiles[match.Tiles.Length - 1].Y + 1;
+            for (var y = 0; y < tiles.GetLength(1); y++)
+            {
+                for (var x = 0; x < tiles.GetLength(0); x++)
+                {
+                    var tile = tiles[x, y];
 
-						matches.Add(match);
-					}
-				}
-			}
+                    var (h, v) = GetTileConnections(x, y, tiles);
+                    //var (j, b) = GetTextConnections(x, y, tiles);
 
-			return matches;
-		}
+                    var tileMatch = new Match(tile, h, v);
+                    //var textMatch = new Match(tile, j, b);
 
-		private static (int, int) GetDirectionOffset(byte direction) => direction switch
-		{
-			0 => (-1, 0),
-			1 => (0, -1),
-			2 => (1, 0),
-			3 => (0, 1),
+                    /*if (tileMatch.Score > -1 || textMatch.Score > -1)
+                    {
+                        if (bestMatch != null)
+                        {
+                            if ((tileMatch.Score > textMatch.Score ? tileMatch.Score : textMatch.Score) > bestMatch.Score)
+                                bestMatch = tileMatch.Score > textMatch.Score ? tileMatch : textMatch;
+                        }
+                        else
+                        {
+                            bestMatch = tileMatch.Score > textMatch.Score ? tileMatch : textMatch;
+                        }
+                    }*/
+                    if (tileMatch.Score > -1)
+                    {
+                        if (bestMatch != null)
+                        {
+                            if (tileMatch.Score > bestMatch.Score)
+                                bestMatch = tileMatch;
+                        }
+                        else
+                        {
+                            bestMatch = tileMatch;
+                        }
+                    }
+                }
+            }
 
-			_ => (0, 0),
-		};
+            return bestMatch;
+        }
 
-		public static Move FindMove(TileData[,] tiles)
-		{
-			var tilesCopy = (TileData[,])tiles.Clone();
+        public static List<Match> FindAllMatches(TileData[,] tiles)
+        {
+            var matches = new List<Match>();
+            var height = tiles.GetLength(1);
+            var width = tiles.GetLength(0);
 
-			var width = tilesCopy.GetLength(0);
-			var height = tilesCopy.GetLength(1);
+            //Find horizontal tile matches;
+            var c = new LoopCounter("Find horizontal tile matches");
+            for (var y = 0; y < height && c.Count; y++)
+            {
+                for (var x = 0; x < width && c.Count; x++)
+                {
+                    var tile = tiles[x, y];
 
-			for (var y = 0; y < height; y++)
-			{
-				for (var x = 0; x < width; x++)
-				{
-					for (byte d = 0; d <= 3; d++)
-					{
-						var (offsetX, offsetY) = GetDirectionOffset(d);
+                    var (h, v) = GetTileConnections(x, y, tiles);
 
-						var x2 = x + offsetX;
-						var y2 = y + offsetY;
+                    var tileMatch = new Match(tile, h, new TileData[0]);
 
-						if (x2 < 0 || x2 > width - 1 || y2 < 0 || y2 > height - 1) continue;
+                    if (tileMatch.Score > -1)
+                    {
+                        x = tileMatch.Tiles[tileMatch.Tiles.Length - 1].X + 1;
 
-						Swap(x, y, x2, y2, tilesCopy);
+                        matches.Add(tileMatch);
+                    }
+                    var a = c.Count;
+                }
+            }
+            // Find vertical tile matches
+            c = new LoopCounter("Find vertical tile matches");
+            for (var x = 0; x < width && c.Count; x++)
+            {
+                for (var y = 0; y < height && c.Count; y++)
+                {
+                    var tile = tiles[x, y];
 
-						if (FindBestMatch(tilesCopy) != null) return new Move(x, y, x2, y2);
+                    var (h, v) = GetTileConnections(x, y, tiles);
 
-						Swap(x2, y2, x, y, tilesCopy);
-					}
-				}
-			}
+                    var tileMatch = new Match(tile, new TileData[0], v);
 
-			return null;
-		}
+                    if (tileMatch.Score > -1)
+                    {
+                        y = tileMatch.Tiles[tileMatch.Tiles.Length - 1].Y + 1;
 
-		public static Move FindBestMove(TileData[,] tiles)
-		{
-			var tilesCopy = (TileData[,])tiles.Clone();
+                        matches.Add(tileMatch);
+                    }
+                }
+            }
 
-			var width = tilesCopy.GetLength(0);
-			var height = tilesCopy.GetLength(1);
+            /*//Find horizontal text matches;
+            for (var y = 0; y < height; y++)
+            {
+                for (var x = 0; x < width; x++)
+                {
+                    var tile = tiles[x, y];
 
-			var bestScore = int.MinValue;
+                    var (h, v) = GetTextConnections(x, y, tiles);
 
-			var bestMove = default(Move);
+                    var textMatch = new Match(tile, h, new TileData[0]);
 
-			for (var y = 0; y < height; y++)
-			{
-				for (var x = 0; x < width; x++)
-				{
-					for (byte d = 0; d <= 3; d++)
-					{
-						var (offsetX, offsetY) = GetDirectionOffset(d);
+                    if (textMatch.Score > -1)
+                    {
+                        x = textMatch.Tiles[textMatch.Tiles.Length - 1].X + 1;
 
-						var x2 = x + offsetX;
-						var y2 = y + offsetY;
+                        matches.Add(textMatch);
+                    }
+                }
+            }
+            // Find vertical text matches
+            for (var x = 0; x < width; x++)
+            {
+                for (var y = 0; y < height; y++)
+                {
+                    var tile = tiles[x, y];
 
-						if (x2 < 0 || x2 > width - 1 || y2 < 0 || y2 > height - 1) continue;
+                    var (h, v) = GetTextConnections(x, y, tiles);
 
-						Swap(x, y, x2, y2, tilesCopy);
+                    var textMatch = new Match(tile, new TileData[0], v);
 
-						var match = FindBestMatch(tilesCopy);
+                    if (textMatch.Score > -1)
+                    {
+                        y = textMatch.Tiles[textMatch.Tiles.Length - 1].Y + 1;
 
-						if (match != null && match.Score > bestScore)
-						{
-							bestMove = new Move(x, y, x2, y2);
+                        matches.Add(textMatch);
+                    }
+                }
+            }*/
+            return matches;
+        }
 
-							bestScore = match.Score;
-						}
+        private static (int, int) GetDirectionOffset(byte direction) => direction switch
+        {
+            0 => (-1, 0),
+            1 => (0, -1),
+            2 => (1, 0),
+            3 => (0, 1),
 
-						Swap(x, y, x2, y2, tilesCopy);
-					}
-				}
-			}
+            _ => (0, 0),
+        };
 
-			return bestMove;
-		}
-	}
+        public static Move FindMove(TileData[,] tiles)
+        {
+            var tilesCopy = (TileData[,])tiles.Clone();
+
+            var width = tilesCopy.GetLength(0);
+            var height = tilesCopy.GetLength(1);
+
+            for (var y = 0; y < height; y++)
+            {
+                for (var x = 0; x < width; x++)
+                {
+                    for (byte d = 0; d <= 3; d++)
+                    {
+                        var (offsetX, offsetY) = GetDirectionOffset(d);
+
+                        var x2 = x + offsetX;
+                        var y2 = y + offsetY;
+
+                        if (x2 < 0 || x2 > width - 1 || y2 < 0 || y2 > height - 1) continue;
+
+                        Swap(x, y, x2, y2, tilesCopy);
+
+                        if (FindBestMatch(tilesCopy) != null) return new Move(x, y, x2, y2);
+
+                        Swap(x2, y2, x, y, tilesCopy);
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public static Move FindBestMove(TileData[,] tiles)
+        {
+            var tilesCopy = (TileData[,])tiles.Clone();
+
+            var width = tilesCopy.GetLength(0);
+            var height = tilesCopy.GetLength(1);
+
+            var bestScore = int.MinValue;
+
+            var bestMove = default(Move);
+
+            for (var y = 0; y < height; y++)
+            {
+                for (var x = 0; x < width; x++)
+                {
+                    for (byte d = 0; d <= 3; d++)
+                    {
+                        var (offsetX, offsetY) = GetDirectionOffset(d);
+
+                        var x2 = x + offsetX;
+                        var y2 = y + offsetY;
+
+                        if (x2 < 0 || x2 > width - 1 || y2 < 0 || y2 > height - 1) continue;
+
+                        Swap(x, y, x2, y2, tilesCopy);
+
+                        var match = FindBestMatch(tilesCopy);
+
+                        if (match != null && match.Score > bestScore)
+                        {
+                            bestMove = new Move(x, y, x2, y2);
+
+                            bestScore = match.Score;
+                        }
+
+                        Swap(x, y, x2, y2, tilesCopy);
+                    }
+                }
+            }
+
+            return bestMove;
+        }
+    }
 }
