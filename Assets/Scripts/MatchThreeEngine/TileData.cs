@@ -1,6 +1,6 @@
 ﻿namespace MatchEngine
 {
-	public readonly struct TileData
+	public class TileData
 	{
 		public readonly int X;
 		public readonly int Y;

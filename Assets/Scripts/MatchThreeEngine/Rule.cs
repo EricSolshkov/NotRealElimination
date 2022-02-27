@@ -9,7 +9,7 @@ namespace MatchEngine
         public TileData _object;
         public TileData _operator;
         public TileData _prop;
-    }
+    } 
 
     
 }
