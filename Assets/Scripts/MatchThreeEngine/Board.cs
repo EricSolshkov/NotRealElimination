@@ -30,7 +30,7 @@ namespace MatchEngine
                 }
                 else
                 {
-                    Debug.LogError("DeathLoop detected with info"+info);
+                    Debug.LogError("DeathLoop detected with info" + info);
                     return false;
                 }
             }
@@ -59,9 +59,8 @@ namespace MatchEngine
         private bool _isSwapping;
         private bool _isMatching;
         private bool _isShuffling;
-        private bool _isContinue =false;
 
-        public event Action<TileTypeAsset, int> OnMatch;
+        public event Action<string, int> OnMatch;
 
         private TileData[,] Matrix
         {
@@ -100,7 +99,7 @@ namespace MatchEngine
 
             if (ensureNoStartingMatches) StartCoroutine(EnsureNoStartingMatches());
 
-            OnMatch += (type, count) => Debug.Log($"Matched {count}x {type.name}.");
+            OnMatch += (typename, count) => Debug.Log($"Matched {count}x {typename}.");
         }
 
         private void Update()
@@ -122,7 +121,7 @@ namespace MatchEngine
             var wait = new WaitForEndOfFrame();
             var matches = TileDataMatrixUtility.FindAllMatches(Matrix);
 
-            LoopCounter counter = new LoopCounter("EnsureNoStartingMatches") ;
+            LoopCounter counter = new LoopCounter("EnsureNoStartingMatches");
             while (TileDataMatrixUtility.FindBestMatch(Matrix) != null && counter.Count)
             {
                 foreach (var match in matches)
@@ -184,7 +183,7 @@ namespace MatchEngine
             while (TileDataMatrixUtility.FindBestMove(matrix) == null || TileDataMatrixUtility.FindBestMatch(matrix) != null)
             {
                 Shuffle();
-                
+
                 matrix = Matrix;
                 if (count.Count) break;
             }
@@ -297,8 +296,20 @@ namespace MatchEngine
                 await inflateSequence.Play()
                                      .AsyncWaitForCompletion();
 
-                foreach (var match in matches)
-                    OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId), match.Tiles.Length);
+                foreach (var match in matches) 
+                {
+                    if ( match.textMatchFlag&&match.tileMatchFlag)
+                    {
+                        var tileMatchType = Array.Find(tileTypes, tileType => tileType.id == match.TypeId).name;
+                        var textMatchType = Array.Find(textTypes, textType => textType.id == match.TextId).name;
+                        OnMatch?.Invoke(tileMatchType + " & " + textMatchType, match.Tiles.Length);
+                    }
+                    else if (match.tileMatchFlag) OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId).name, match.Tiles.Length);
+                    else if (match.textMatchFlag) OnMatch?.Invoke(Array.Find(textTypes, textType => textType.id == match.TextId).name, match.Tiles.Length);
+                }
+                    
+
+
 
                 matches = TileDataMatrixUtility.FindAllMatches(Matrix);
             }

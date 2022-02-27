@@ -1,60 +1,97 @@
 ﻿namespace MatchEngine
 {
-	public enum MatchType
-	{
-		tile,
-		text,
-		both
-	};
-	public sealed class Match
-	{
-		
+    public sealed class Match
+    {
 
-		public readonly int TypeId;
 
-		public readonly int TextId;
+        public readonly int TypeId;
 
-		public readonly int Score;
+        public readonly int TextId;
 
-		public readonly TileData[] Tiles;
+        public readonly int Score;
 
-		public readonly MatchType matchType;
+        public readonly TileData[] Tiles;
 
-		public Match(TileData origin, TileData[] horizontal, TileData[] vertical)
-		{
-			TypeId = origin.TypeId;
+        public readonly bool tileMatchFlag = false;
 
-			TextId = origin.TextId;
+        public readonly bool textMatchFlag = false;
 
-			if (horizontal.Length >= 2 && vertical.Length >= 2)
-			{
-				Tiles = new TileData[horizontal.Length + vertical.Length + 1];
+        public readonly int rightBound;
 
-				Tiles[0] = origin;
+        public readonly int leftBound;
 
-				horizontal.CopyTo(Tiles, 1);
+        public readonly int topBound;
 
-				vertical.CopyTo(Tiles, horizontal.Length + 1);
-			}
-			else if (horizontal.Length >= 2)
-			{
-				Tiles = new TileData[horizontal.Length + 1];
+        public readonly int bottomBound;
 
-				Tiles[0] = origin;
 
-				horizontal.CopyTo(Tiles, 1);
-			}
-			else if (vertical.Length >= 2)
-			{
-				Tiles = new TileData[vertical.Length + 1];
+        public Match(TileData origin, TileData[] horizontal, TileData[] vertical)
+        {
+            TypeId = origin.TypeId;
 
-				Tiles[0] = origin;
+            TextId = origin.TextId;
 
-				vertical.CopyTo(Tiles, 1);
-			}
-			else Tiles = null;
+            rightBound = origin.X;
 
-			Score = Tiles?.Length ?? -1;
-		}
-	}
+            leftBound = origin.X;
+
+            topBound = origin.Y;
+
+            bottomBound = origin.Y;
+
+            foreach (var tile in horizontal)
+            {
+                rightBound = tile.X > rightBound ? tile.X : rightBound;
+                leftBound = tile.X < leftBound ? tile.X : leftBound;
+            }
+            foreach (var tile in vertical)
+            {
+                topBound = tile.Y < topBound ? tile.Y : topBound;
+                bottomBound = tile.Y > bottomBound ? tile.Y : bottomBound;
+            }
+
+            if (horizontal.Length >= 2 && vertical.Length >= 2)
+            {
+                Tiles = new TileData[horizontal.Length + vertical.Length + 1];
+
+                Tiles[0] = origin;
+
+                horizontal.CopyTo(Tiles, 1);
+
+                vertical.CopyTo(Tiles, horizontal.Length + 1);
+            }
+            else if (horizontal.Length >= 2)
+            {
+                Tiles = new TileData[horizontal.Length + 1];
+
+                Tiles[0] = origin;
+
+                horizontal.CopyTo(Tiles, 1);
+            }
+            else if (vertical.Length >= 2)
+            {
+                Tiles = new TileData[vertical.Length + 1];
+
+                Tiles[0] = origin;
+
+                vertical.CopyTo(Tiles, 1);
+            }
+            else Tiles = null;
+
+            if (Tiles != null)
+            {
+                tileMatchFlag = true;
+                textMatchFlag = true;
+
+                foreach (var tile in Tiles)
+                {
+                    if (tile.TypeId != Tiles[0].TypeId) tileMatchFlag = false;
+                    if (tile.TextId != Tiles[0].TextId) textMatchFlag = false;
+                }
+
+            }
+            Score = Tiles?.Length ?? -1;
+        }
+
+    }
 }

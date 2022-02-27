@@ -45,7 +45,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                if (other.TypeId == origin.TypeId) verticalConnections.Add(other);
                 else break;
             }
 
@@ -53,7 +53,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                if (other.TypeId == origin.TypeId) verticalConnections.Add(other);
                 else break;
             }
 
@@ -91,7 +91,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                if (other.TextId == origin.TextId) verticalConnections.Add(other);
                 else break;
             }
 
@@ -99,7 +99,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                if (other.TextId == origin.TextId) verticalConnections.Add(other);
                 else break;
             }
 
@@ -151,12 +151,12 @@ namespace MatchEngine
                     var tile = tiles[x, y];
 
                     var (h, v) = GetTileConnections(x, y, tiles);
-                    //var (j, b) = GetTextConnections(x, y, tiles);
+                    var (j, b) = GetTextConnections(x, y, tiles);
 
                     var tileMatch = new Match(tile, h, v);
-                    //var textMatch = new Match(tile, j, b);
+                    var textMatch = new Match(tile, j, b);
 
-                    /*if (tileMatch.Score > -1 || textMatch.Score > -1)
+                    if (tileMatch.Score > -1 || textMatch.Score > -1)
                     {
                         if (bestMatch != null)
                         {
@@ -167,8 +167,8 @@ namespace MatchEngine
                         {
                             bestMatch = tileMatch.Score > textMatch.Score ? tileMatch : textMatch;
                         }
-                    }*/
-                    if (tileMatch.Score > -1)
+                    }
+                    /*if (tileMatch.Score > -1)
                     {
                         if (bestMatch != null)
                         {
@@ -179,7 +179,7 @@ namespace MatchEngine
                         {
                             bestMatch = tileMatch;
                         }
-                    }
+                    }*/
                 }
             }
 
@@ -206,7 +206,7 @@ namespace MatchEngine
 
                     if (tileMatch.Score > -1)
                     {
-                        x = tileMatch.Tiles[tileMatch.Tiles.Length - 1].X + 1;
+                        x = tileMatch.rightBound;
 
                         matches.Add(tileMatch);
                     }
@@ -227,14 +227,14 @@ namespace MatchEngine
 
                     if (tileMatch.Score > -1)
                     {
-                        y = tileMatch.Tiles[tileMatch.Tiles.Length - 1].Y + 1;
+                        y = tileMatch.bottomBound;
 
                         matches.Add(tileMatch);
                     }
                 }
             }
 
-            /*//Find horizontal text matches;
+            //Find horizontal text matches;
             for (var y = 0; y < height; y++)
             {
                 for (var x = 0; x < width; x++)
@@ -247,7 +247,7 @@ namespace MatchEngine
 
                     if (textMatch.Score > -1)
                     {
-                        x = textMatch.Tiles[textMatch.Tiles.Length - 1].X + 1;
+                        x = textMatch.rightBound;
 
                         matches.Add(textMatch);
                     }
@@ -266,12 +266,12 @@ namespace MatchEngine
 
                     if (textMatch.Score > -1)
                     {
-                        y = textMatch.Tiles[textMatch.Tiles.Length - 1].Y + 1;
+                        y = textMatch.bottomBound;
 
                         matches.Add(textMatch);
                     }
                 }
-            }*/
+            }
             return matches;
         }
 
