@@ -1,7 +1,0 @@
-[objects]
-THAT：当同时存在两个that分别处于不同规则的主语和宾语位置时，连接两条规则。
-[operators]
-IS:表示[obj]具有某种属性
-[properties]
-LAZY：不参与造句，可被移动，可被消除
-FROZEN:无法被移动，但可以被消除
