@@ -114,6 +114,7 @@ namespace MatchEngine
                     Select(GetTile(bestMove.X2, bestMove.Y2));
                 }
             }
+
         }
 
         private IEnumerator EnsureNoStartingMatches()
@@ -158,25 +159,36 @@ namespace MatchEngine
 
             if (!_selection.Contains(tile))
             {
-                if (_selection.Count > 0)
+                if (_selection.Count == 0)
                 {
-                    if (Math.Abs(tile.x - _selection[0].x) == 1 && Math.Abs(tile.y - _selection[0].y) == 0
-                        || Math.Abs(tile.y - _selection[0].y) == 1 && Math.Abs(tile.x - _selection[0].x) == 0)
-                        _selection.Add(tile);
+                    _selection.Add(tile);
+                    HighLight(tile);
                 }
                 else
                 {
+                    if ((Math.Abs(tile.x - _selection[0].x) != 1 || Math.Abs(tile.y - _selection[0].y) != 0)
+                        && (Math.Abs(tile.y - _selection[0].y) != 1 || Math.Abs(tile.x - _selection[0].x) != 0))
+                    {
+                        foreach (var delightTile in _selection) DeLight(delightTile);
+                        _selection.Clear();
+                    }
                     _selection.Add(tile);
+                    HighLight(tile);
                 }
+            }
+            else
+            {
+                foreach (var delightTile in _selection) DeLight(delightTile);
+                _selection.Clear();
             }
 
             if (_selection.Count < 2) return;
 
+            foreach (var delightTile in _selection) DeLight(delightTile);
+
             await SwapAsync(_selection[0], _selection[1]);
 
             if (!await TryMatchAsync()) await SwapAsync(_selection[0], _selection[1]);
-
-
 
             var matrix = Matrix;
             var count = new LoopCounter("Selection");
@@ -190,6 +202,17 @@ namespace MatchEngine
 
             _selection.Clear();
         }
+
+        public void HighLight(Tile tile)
+        {
+            tile.GetComponent<UnityEngine.UI.Image>().sprite = tile.tileBackgrounds[1];
+        }
+
+        public void DeLight(Tile tile)
+        {
+            tile.GetComponent<UnityEngine.UI.Image>().sprite = tile.tileBackgrounds[0];
+        }
+
 
         private async Task SwapAsync(Tile tile1, Tile tile2)
         {
@@ -296,9 +319,9 @@ namespace MatchEngine
                 await inflateSequence.Play()
                                      .AsyncWaitForCompletion();
 
-                foreach (var match in matches) 
+                foreach (var match in matches)
                 {
-                    if ( match.textMatchFlag&&match.tileMatchFlag)
+                    if (match.textMatchFlag && match.tileMatchFlag)
                     {
                         var tileMatchType = Array.Find(tileTypes, tileType => tileType.id == match.TypeId).name;
                         var textMatchType = Array.Find(textTypes, textType => textType.id == match.TextId).name;
@@ -307,7 +330,7 @@ namespace MatchEngine
                     else if (match.tileMatchFlag) OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId).name, match.Tiles.Length);
                     else if (match.textMatchFlag) OnMatch?.Invoke(Array.Find(textTypes, textType => textType.id == match.TextId).name, match.Tiles.Length);
                 }
-                    
+
 
 
 

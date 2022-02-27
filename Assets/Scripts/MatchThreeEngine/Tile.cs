@@ -11,6 +11,8 @@ namespace MatchEngine
 		public Image icon;
 		public Image text;
 
+		public Sprite[] tileBackgrounds;
+
 		public Button button;
 
 		private TileTypeAsset _type;

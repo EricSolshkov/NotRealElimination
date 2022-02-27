@@ -245,6 +245,9 @@ MonoBehaviour:
   y: 0
   icon: {fileID: 4800894270840285488}
   text: {fileID: 9004229829587014368}
+  tileBackgrounds:
+  - {fileID: 21300000, guid: da02ec1212406774a8a1da9e9cbbb8f5, type: 3}
+  - {fileID: 21300000, guid: b494d88d7cdae5444b59c0b502e1bec1, type: 3}
   button: {fileID: 4800894271322220264}
 --- !u!114 &4800894271322220264
 MonoBehaviour:
