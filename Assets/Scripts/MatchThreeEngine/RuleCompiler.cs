@@ -1,58 +1,80 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace MatchEngine
 {
-    public enum TextLogicType
-    {
-        pure,
-        obj,
-        op,
-        prop,
-        prep,
-        func
-    }
+    
+
     public class RuleCompiler : MonoBehaviour
     {
-        public TileData[] isTiles;
-        public Rule[] rules;
-
-        public List<TileTypeAsset> pureTypes;
-        public List<TileTypeAsset> objTypes;
-        public List<TileTypeAsset> opTypes;
-        public List<TileTypeAsset> propTypes;
-        public List<TileTypeAsset> prepTypes;
-        public List<TileTypeAsset> funcTypes;
-
-        private Rule[] protoRules;
-
         /// <summary>
         /// 根据规则语句结构匹配潜在的proto rules
         /// </summary>
         /// <param name="matrix">待匹配矩阵</param>
-        public void PreProcess(TileData[,] matrix)
+        public static void PreProcess(TileData[,] matrix, List<Rule> rules)
         {
+            rules.Clear();
             var width = matrix.GetLength(0);
             var height = matrix.GetLength(1);
             // find horizontal rules 
             for (var y = 0; y < height; ++y)
             {
-                for (var x = 0; x < width; ++x) 
+                for (var x = 1; x < width-1; ++x) 
                 {
-                   // if tile is opType
-                   //   try match op with obj and prop like obj-op-prop
-                   //   try match op with obj and obj like obj-op-obj
-                   //   try match op with func and prop like func-op-obj
-                   // if tile is funcType
-                   //   try match func with 
-
+                    // if tile is opType
+                    if (matrix[x, y].Type == LogicType.op)
+                    {
+                        // try match op with obj and prop like obj-op-prop
+                        if (matrix[x - 1, y].Type == LogicType.obj &&
+                            matrix[x + 1, y].Type == LogicType.prop)
+                        {
+                            rules.Add(new Evaluation(matrix[x - 1, y].TextId, matrix[x + 1, y].TextId));
+                        }
+                        // try match op with obj and obj like obj-op-obj
+                        if (matrix[x - 1, y].Type == LogicType.obj &&
+                            matrix[x + 1, y].Type == LogicType.obj)
+                        {
+                            rules.Add(new OneWayReplace(matrix[x - 1, y].TextId, matrix[x + 1, y].TextId));
+                        }
+                        // try match op with func and prop like func-op-obj
+                        if (matrix[x - 1, y].Type == LogicType.func &&
+                            matrix[x + 1, y].Type == LogicType.prop)
+                        {
+                            rules.Add(new CallFunction(matrix[x - 1, y].TextId, matrix[x + 1, y].TextId));
+                        }
+                    }
                 }
             }
             // find vertical rules 
             for (var x = 0; x < width; ++x)
             {
-                for (var y = 0; y < height; ++y) ;
+                for (var y = 1; y < height - 1; ++y)
+                {
+                    // if tile is opType
+                    if (matrix[x, y].Type == LogicType.op)
+                    {
+                        // match obj-op-prop as evaluation
+                        if (matrix[x, y - 1].Type == LogicType.obj &&
+                            matrix[x, y + 1].Type == LogicType.prop)
+                        {
+                            rules.Add(new Evaluation(matrix[x, y - 1].TextId, matrix[x, y + 1].TextId));
+                        }
+                        // match obj-op-obj as one way replace
+                        if (matrix[x, y - 1].Type == LogicType.obj &&
+                            matrix[x, y + 1].Type == LogicType.obj)
+                        {
+                            rules.Add(new OneWayReplace(matrix[x, y - 1].TextId, matrix[x, y + 1].TextId));
+                        }
+                        // match func-op-obj as call function
+                        if (matrix[x, y - 1].Type == LogicType.func &&
+                            matrix[x, y + 1].Type == LogicType.prop)
+                        {
+                            rules.Add(new CallFunction(matrix[x, y - 1].TextId, matrix[x, y + 1].TextId));
+                        }
+                    }
+                }
             }
         }
 
@@ -60,31 +82,11 @@ namespace MatchEngine
         {
             var width = matrix.GetLength(0);
             var height = matrix.GetLength(1);
-
-            
         }
 
-        public TextLogicType LogicType(TileData tile)
-        {
-            foreach (var tileType in pureTypes) if (tileType.id == tile.TextId) return TextLogicType.pure;
-            foreach (var tileType in objTypes) if (tileType.id == tile.TextId) return TextLogicType.obj;
-            foreach (var tileType in opTypes) if (tileType.id == tile.TextId) return TextLogicType.op;
-            foreach (var tileType in propTypes) if (tileType.id == tile.TextId) return TextLogicType.prop;
-            foreach (var tileType in prepTypes) if (tileType.id == tile.TextId) return TextLogicType.prep;
-            foreach (var tileType in funcTypes) if (tileType.id == tile.TextId) return TextLogicType.func;
-            return TextLogicType.pure;
-        }
+        
 
-        public bool isLogicType(TileData tile)
-        {
-            foreach (var tileType in pureTypes) if (tileType.id == tile.TextId) return false;
-            foreach (var tileType in objTypes) if (tileType.id == tile.TextId) return true;
-            foreach (var tileType in opTypes) if (tileType.id == tile.TextId) return true;
-            foreach (var tileType in propTypes) if (tileType.id == tile.TextId) return true;
-            foreach (var tileType in prepTypes) if (tileType.id == tile.TextId) return true;
-            foreach (var tileType in funcTypes) if (tileType.id == tile.TextId) return true;
-            return false;
-        }
+        
 
 
     }

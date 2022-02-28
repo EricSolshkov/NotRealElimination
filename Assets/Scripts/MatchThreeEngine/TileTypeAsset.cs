@@ -7,8 +7,9 @@ namespace MatchEngine
 	{
 		public int id;
 
-		public int value;
+		public LogicType type;
 
 		public Sprite sprite;
+
 	}
 }

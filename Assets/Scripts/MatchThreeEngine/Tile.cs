@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 namespace MatchEngine
 {
+	
 	public sealed class Tile : MonoBehaviour
 	{
 		public int x;
@@ -15,20 +16,20 @@ namespace MatchEngine
 
 		public Button button;
 
-		private TileTypeAsset _type;
+		private TileTypeAsset _tile;
 		private TileTypeAsset _text;
 
 		public TileTypeAsset Type
 		{
-			get => _type;
+			get => _tile;
 
 			set
 			{
-				if (_type == value) return;
+				if (_tile == value) return;
 
-				_type = value;
+				_tile = value;
 
-				icon.sprite = _type.sprite;
+				icon.sprite = _tile.sprite;
 			}
 		}
 		public TileTypeAsset Text
@@ -45,6 +46,6 @@ namespace MatchEngine
 			}
 		}
 
-		public TileData Data => new TileData(x, y, _type.id, _text.id);
+		public TileData Data => new TileData(x, y, _tile.id, _text.id, _text.type);
 	}
 }

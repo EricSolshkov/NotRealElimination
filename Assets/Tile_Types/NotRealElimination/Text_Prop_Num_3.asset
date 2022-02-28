@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Text_Prop_Num_3
   m_EditorClassIdentifier: 
   id: 233
-  value: 0
+  type: 3
   sprite: {fileID: 5312402214031769025, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

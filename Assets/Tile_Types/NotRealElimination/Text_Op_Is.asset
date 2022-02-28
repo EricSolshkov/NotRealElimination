@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Text_Op_Is
   m_EditorClassIdentifier: 
   id: 201
-  value: 0
+  type: 2
   sprite: {fileID: -5253741208918867948, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

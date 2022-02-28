@@ -27,7 +27,7 @@
 
         public Match(TileData origin, TileData[] horizontal, TileData[] vertical)
         {
-            TypeId = origin.TypeId;
+            TypeId = origin.TileId;
 
             TextId = origin.TextId;
 
@@ -85,7 +85,7 @@
 
                 foreach (var tile in Tiles)
                 {
-                    if (tile.TypeId != Tiles[0].TypeId) tileMatchFlag = false;
+                    if (tile.TileId != Tiles[0].TileId) tileMatchFlag = false;
                     if (tile.TextId != Tiles[0].TextId) textMatchFlag = false;
                 }
 

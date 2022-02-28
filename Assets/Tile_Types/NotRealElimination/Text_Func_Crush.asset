@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Text_Func_Crush
   m_EditorClassIdentifier: 
   id: 211
-  value: 0
+  type: 5
   sprite: {fileID: -101691946209824069, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

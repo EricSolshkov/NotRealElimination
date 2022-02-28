@@ -54,6 +54,10 @@ namespace MatchEngine
 
         [SerializeField] private bool ensureNoStartingMatches;
 
+        [SerializeField] private List<Rule> rules=new List<Rule>();
+
+
+
         private readonly List<Tile> _selection = new List<Tile>();
 
         private bool _isSwapping;
@@ -98,6 +102,10 @@ namespace MatchEngine
             }
 
             if (ensureNoStartingMatches) StartCoroutine(EnsureNoStartingMatches());
+
+            rules.Add(new CallFunction(0, 0));
+
+            RuleCompiler.PreProcess(Matrix,rules);
 
             OnMatch += (typename, count) => Debug.Log($"Matched {count}x {typename}.");
         }
@@ -170,6 +178,7 @@ namespace MatchEngine
                         && (Math.Abs(tile.y - _selection[0].y) != 1 || Math.Abs(tile.x - _selection[0].x) != 0))
                     {
                         foreach (var delightTile in _selection) DeLight(delightTile);
+
                         _selection.Clear();
                     }
                     _selection.Add(tile);
@@ -179,6 +188,7 @@ namespace MatchEngine
             else
             {
                 foreach (var delightTile in _selection) DeLight(delightTile);
+
                 _selection.Clear();
             }
 
@@ -276,9 +286,12 @@ namespace MatchEngine
 
             _isMatching = true;
 
+            RuleCompiler.PreProcess(Matrix, rules);
+
             var matches = TileDataMatrixUtility.FindAllMatches(Matrix);
 
             var c = new LoopCounter("TryMatchAsync");
+
             while (matches.Count != 0 && c.Count)
             {
                 didMatch = true;

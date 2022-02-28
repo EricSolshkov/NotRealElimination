@@ -29,7 +29,7 @@ namespace MatchEngine
             {
                 var other = tiles[x, originY];
 
-                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                if (other.TileId == origin.TileId) horizontalConnections.Add(other);
                 else break;
             }
 
@@ -37,7 +37,7 @@ namespace MatchEngine
             {
                 var other = tiles[x, originY];
 
-                if (other.TypeId == origin.TypeId) horizontalConnections.Add(other);
+                if (other.TileId == origin.TileId) horizontalConnections.Add(other);
                 else break;
             }
 
@@ -45,7 +45,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TypeId == origin.TypeId) verticalConnections.Add(other);
+                if (other.TileId == origin.TileId) verticalConnections.Add(other);
                 else break;
             }
 
@@ -53,7 +53,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TypeId == origin.TypeId) verticalConnections.Add(other);
+                if (other.TileId == origin.TileId) verticalConnections.Add(other);
                 else break;
             }
 
