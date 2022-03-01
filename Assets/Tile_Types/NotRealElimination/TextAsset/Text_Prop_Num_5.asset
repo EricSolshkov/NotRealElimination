@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51d742e6c1f64287bcbf4ece0ac2dc56, type: 3}
-  m_Name: Tile_Skoto
+  m_Name: Text_Prop_Num_5
   m_EditorClassIdentifier: 
-  id: 5
-  value: 0
-  sprite: {fileID: -350300651375241920, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}
+  text: 8
+  logicType: 3
+  sprite: {fileID: 5827989899978193952, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

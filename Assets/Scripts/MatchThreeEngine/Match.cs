@@ -4,9 +4,9 @@
     {
 
 
-        public readonly int TypeId;
+        public readonly TileName name;
 
-        public readonly int TextId;
+        public readonly Text text;
 
         public readonly int Score;
 
@@ -27,9 +27,9 @@
 
         public Match(TileData origin, TileData[] horizontal, TileData[] vertical)
         {
-            TypeId = origin.TileId;
+            name = origin.tileName;
 
-            TextId = origin.TextId;
+            text = origin.text;
 
             rightBound = origin.X;
 
@@ -85,8 +85,8 @@
 
                 foreach (var tile in Tiles)
                 {
-                    if (tile.TileId != Tiles[0].TileId) tileMatchFlag = false;
-                    if (tile.TextId != Tiles[0].TextId) textMatchFlag = false;
+                    if (tile.tileName != Tiles[0].tileName) tileMatchFlag = false;
+                    if (tile.text != Tiles[0].text) textMatchFlag = false;
                 }
 
             }

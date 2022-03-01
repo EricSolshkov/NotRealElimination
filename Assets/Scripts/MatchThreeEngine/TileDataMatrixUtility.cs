@@ -29,7 +29,7 @@ namespace MatchEngine
             {
                 var other = tiles[x, originY];
 
-                if (other.TileId == origin.TileId) horizontalConnections.Add(other);
+                if (other.tileName == origin.tileName) horizontalConnections.Add(other);
                 else break;
             }
 
@@ -37,7 +37,7 @@ namespace MatchEngine
             {
                 var other = tiles[x, originY];
 
-                if (other.TileId == origin.TileId) horizontalConnections.Add(other);
+                if (other.tileName == origin.tileName) horizontalConnections.Add(other);
                 else break;
             }
 
@@ -45,7 +45,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TileId == origin.TileId) verticalConnections.Add(other);
+                if (other.tileName == origin.tileName) verticalConnections.Add(other);
                 else break;
             }
 
@@ -53,7 +53,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TileId == origin.TileId) verticalConnections.Add(other);
+                if (other.tileName == origin.tileName) verticalConnections.Add(other);
                 else break;
             }
 
@@ -75,7 +75,7 @@ namespace MatchEngine
             {
                 var other = tiles[x, originY];
 
-                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                if (other.text == origin.text) horizontalConnections.Add(other);
                 else break;
             }
 
@@ -83,7 +83,7 @@ namespace MatchEngine
             {
                 var other = tiles[x, originY];
 
-                if (other.TextId == origin.TextId) horizontalConnections.Add(other);
+                if (other.text == origin.text) horizontalConnections.Add(other);
                 else break;
             }
 
@@ -91,7 +91,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TextId == origin.TextId) verticalConnections.Add(other);
+                if (other.text == origin.text) verticalConnections.Add(other);
                 else break;
             }
 
@@ -99,7 +99,7 @@ namespace MatchEngine
             {
                 var other = tiles[originX, y];
 
-                if (other.TextId == origin.TextId) verticalConnections.Add(other);
+                if (other.text == origin.text) verticalConnections.Add(other);
                 else break;
             }
 

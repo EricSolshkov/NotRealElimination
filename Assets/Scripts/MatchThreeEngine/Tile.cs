@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 namespace MatchEngine
 {
-	
-	public sealed class Tile : MonoBehaviour
+
+    public sealed class Tile : MonoBehaviour
 	{
 		public int x;
 		public int y;
@@ -17,9 +17,9 @@ namespace MatchEngine
 		public Button button;
 
 		private TileTypeAsset _tile;
-		private TileTypeAsset _text;
+		private TextTypeAsset _text;
 
-		public TileTypeAsset Type
+		public TileTypeAsset TileAsset
 		{
 			get => _tile;
 
@@ -32,7 +32,7 @@ namespace MatchEngine
 				icon.sprite = _tile.sprite;
 			}
 		}
-		public TileTypeAsset Text
+		public TextTypeAsset TextAsset
 		{
 			get => _text;
 
@@ -46,6 +46,6 @@ namespace MatchEngine
 			}
 		}
 
-		public TileData Data => new TileData(x, y, _tile.id, _text.id, _text.type);
+		public TileData Data => new TileData(x, y, _tile.name, _text.text, _text.logicType);
 	}
 }

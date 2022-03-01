@@ -40,7 +40,7 @@ namespace MatchEngine
     {
         [SerializeField] private TileTypeAsset[] tileTypes;
 
-        [SerializeField] private TileTypeAsset[] textTypes;
+        [SerializeField] private TextTypeAsset[] textTypes;
 
         [SerializeField] private Row[] rows;
 
@@ -268,14 +268,14 @@ namespace MatchEngine
             tile1.text = text2;
             tile2.text = text1;
 
-            var tile1Item = tile1.Type;
-            var tile1Text = tile1.Text;
+            var tile1Item = tile1.TileAsset;
+            var tile1Text = tile1.TextAsset;
 
-            tile1.Type = tile2.Type;
-            tile1.Text = tile2.Text;
+            tile1.TileAsset = tile2.TileAsset;
+            tile1.TextAsset = tile2.TextAsset;
 
-            tile2.Type = tile1Item;
-            tile2.Text = tile1Text;
+            tile2.TileAsset = tile1Item;
+            tile2.TextAsset = tile1Text;
 
             _isSwapping = false;
         }
@@ -336,12 +336,20 @@ namespace MatchEngine
                 {
                     if (match.textMatchFlag && match.tileMatchFlag)
                     {
-                        var tileMatchType = Array.Find(tileTypes, tileType => tileType.id == match.TypeId).name;
-                        var textMatchType = Array.Find(textTypes, textType => textType.id == match.TextId).name;
-                        OnMatch?.Invoke(tileMatchType + " & " + textMatchType, match.Tiles.Length);
+                        var tileName = Array.Find(tileTypes, tileType => tileType.name == match.name).name;
+                        var text = Array.Find(textTypes, textType => textType.text == match.text).name;
+                        OnMatch?.Invoke(tileName + " & " + text, match.Tiles.Length);
                     }
-                    else if (match.tileMatchFlag) OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId).name, match.Tiles.Length);
-                    else if (match.textMatchFlag) OnMatch?.Invoke(Array.Find(textTypes, textType => textType.id == match.TextId).name, match.Tiles.Length);
+                    else if (match.tileMatchFlag)
+                    {
+                        var tileName = Array.Find(tileTypes, tileType => tileType.name == match.name).name.ToString();
+                        OnMatch?.Invoke(tileName, match.Tiles.Length);
+                    }
+                    else if (match.textMatchFlag)
+                    {
+                        var text = Array.Find(textTypes, textType => textType.text == match.text).text.ToString();
+                        OnMatch?.Invoke(text, match.Tiles.Length);
+                    }
                 }
 
 
@@ -357,8 +365,8 @@ namespace MatchEngine
 
         private void Generate(Tile tile)
         {
-            tile.Type = tileTypes[Random.Range(0, tileTypes.Length)];
-            tile.Text = textTypes[Random.Range(0, textTypes.Length)];
+            tile.TileAsset = tileTypes[Random.Range(0, tileTypes.Length)];
+            tile.TextAsset = textTypes[Random.Range(0, textTypes.Length)];
         }
 
         private void Shuffle()
