@@ -1,48 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 namespace MatchEngine
 {
-    class Expression
-    {
-        bool isLeaf;
-        TileData root;
-        Expression lParam;
-        Expression rParam;
-        public Expression(TileData _root, Expression _lParam, Expression _rParam)
-        {
-            root = _root;
-            lParam = _lParam;
-            rParam = _rParam;
-            isLeaf = false;
-        }
-        public Expression(TileData _root, Expression _rParam)
-        {
-            root = _root;
-            rParam = _rParam;
-            isLeaf = false;
-        }
-
-        public Expression(TileData _root) 
-        {
-            root = _root;
-            isLeaf = true;
-        }
-    }
     
+
 
     public class RuleCompiler : MonoBehaviour
     {
-        private TileData[,] matrix;
-        private List<TileData> protoExpr;
-        private List<Expression> ast;
-        /// <summary>
+        private static TileData[,] matrix;
+        private static List<List<Expression>> protoExprs;
+        private static List<Expression> ast;
+        /*/// <summary>
         /// 根据规则语句结构匹配潜在的proto rules
         /// </summary>
         /// <param name="matrix">待匹配矩阵</param>
-        public static void PreProcess(TileData[,] matrix, List<Rule> rules)
+        /*public static void PreProcess(TileData[,] matrix, List<Rule> rules)
         {
             rules.Clear();
             var width = matrix.GetLength(0);
@@ -105,16 +78,74 @@ namespace MatchEngine
                     }
                 }
             }
-        }
+        }*/
+        /// <summary>
+        /// 将所有长度超过3的连续text方块构造为Expression数组
+        /// </summary>
+        public static void PreProcess()
+        {
+            var width = matrix.GetLength(0);
+            var height = matrix.GetLength(1);
+            protoExprs = new List<List<Expression>>();
+            // find horizontal protoExpr
+            for (var y = 0; y < height; ++y)
+            {
+                for (var x = 0; x < width; ++x)
+                {
+                    var protoExpr = new List<Expression>();
+                    while (x < width && matrix[x, y].logicType != LogicType.pure)
+                    {
+                        protoExpr.Add(new Expression(matrix[x, y]));
+                        ++x;
+                    }
+                    if (protoExpr.Count >= 3) protoExprs.Add(protoExpr);
+                }
+            }
+            for (var x = 0; x < width; ++x)
+            {
+                for (var y = 0; y < height; ++y)
+                {
+                    var protoExpr = new List<Expression>();
+                    while (y < height && matrix[x, y].logicType != LogicType.pure)
+                    {
+                        protoExpr.Add(new Expression(matrix[x, y]));
+                        ++y;
+                    }
+                    if (protoExpr.Count >= 3) protoExprs.Add(protoExpr);
+                }
+            }
 
-        public void Compile(List<Rule> rules)
+        }
+        /// <summary>
+        /// 根据Expression数组尝试生成满足词性结构的AST
+        /// </summary>
+        private static void GenerateAST()
+        {
+            foreach(var proto in protoExprs)
+            {
+                
+                
+            }
+            // 当无法构成AST时
+            //if (true) Debug.Log("Syntax Error - Invalid syntax: " +proto[index].text+"("+ proto[index].logicType+") followed by invalid logic type." );
+
+        }
+        private static void Compile()
         {
 
         }
+        public static void Compile(TileData[,] _matrix, List<Expression> rules)
+        {
+            matrix = _matrix;
+            PreProcess();
+            GenerateAST();
+            Compile();
+        }
 
-        
 
-        
+
+
+
 
 
     }

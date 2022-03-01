@@ -1,9 +1,9 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DG.Tweening;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
@@ -54,7 +54,7 @@ namespace MatchEngine
 
         [SerializeField] private bool ensureNoStartingMatches;
 
-        [SerializeField] private List<Rule> rules=new List<Rule>();
+        [SerializeField] private List<Expression> rules = new List<Expression>();
 
 
 
@@ -103,9 +103,7 @@ namespace MatchEngine
 
             if (ensureNoStartingMatches) StartCoroutine(EnsureNoStartingMatches());
 
-            rules.Add(new CallFunction(0, 0));
-
-            RuleCompiler.PreProcess(Matrix,rules);
+            RuleCompiler.Compile(Matrix, rules);
 
             OnMatch += (typename, count) => Debug.Log($"Matched {count}x {typename}.");
         }
@@ -286,7 +284,7 @@ namespace MatchEngine
 
             _isMatching = true;
 
-            RuleCompiler.PreProcess(Matrix, rules);
+            RuleCompiler.Compile(Matrix, rules);
 
             var matches = TileDataMatrixUtility.FindAllMatches(Matrix);
 

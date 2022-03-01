@@ -105,7 +105,7 @@ namespace MatchEngine
 
             return (horizontalConnections.ToArray(), verticalConnections.ToArray());
         }
-        
+
         /*public static Match FindBestMatch(TileData[,] tiles)
         {
             var bestMatch = default(Match);

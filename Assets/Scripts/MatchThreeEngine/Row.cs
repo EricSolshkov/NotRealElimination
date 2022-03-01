@@ -2,8 +2,8 @@
 
 namespace MatchEngine
 {
-	public sealed class Row : MonoBehaviour
-	{
-		public Tile[] tiles;
-	}
+    public sealed class Row : MonoBehaviour
+    {
+        public Tile[] tiles;
+    }
 }
