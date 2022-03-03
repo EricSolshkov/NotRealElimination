@@ -4,9 +4,9 @@
     {
 
 
-        public readonly TileName name;
+        public readonly string name;
 
-        public readonly Text text;
+        public readonly string text;
 
         public readonly int Score;
 

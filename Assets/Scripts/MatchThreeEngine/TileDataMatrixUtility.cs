@@ -151,35 +151,31 @@ namespace MatchEngine
                     var tile = tiles[x, y];
 
                     var (h, v) = GetTileConnections(x, y, tiles);
-                    var (j, b) = GetTextConnections(x, y, tiles);
 
                     var tileMatch = new Match(tile, h, v);
-                    var textMatch = new Match(tile, j, b);
 
-                    if (tileMatch.Score > -1 || textMatch.Score > -1)
+                    var candidate = default(Match);
+
+                    if (tile.text != "null")
+                    {
+                        (h, v) = GetTextConnections(x, y, tiles);
+
+                        var textMatch = new Match(tile, h, v);
+
+                        candidate = textMatch.Score > tileMatch.Score ? textMatch : tileMatch;
+                    }
+
+                    if (candidate != null && candidate.Score > -1)
                     {
                         if (bestMatch != null)
                         {
-                            if ((tileMatch.Score > textMatch.Score ? tileMatch.Score : textMatch.Score) > bestMatch.Score)
-                                bestMatch = tileMatch.Score > textMatch.Score ? tileMatch : textMatch;
+                            bestMatch = candidate.Score > bestMatch.Score ? candidate : bestMatch;
                         }
                         else
                         {
-                            bestMatch = tileMatch.Score > textMatch.Score ? tileMatch : textMatch;
+                            bestMatch = candidate;
                         }
                     }
-                    /*if (tileMatch.Score > -1)
-                    {
-                        if (bestMatch != null)
-                        {
-                            if (tileMatch.Score > bestMatch.Score)
-                                bestMatch = tileMatch;
-                        }
-                        else
-                        {
-                            bestMatch = tileMatch;
-                        }
-                    }*/
                 }
             }
 
@@ -241,6 +237,8 @@ namespace MatchEngine
                 {
                     var tile = tiles[x, y];
 
+                    if (tile.text == "null") continue;
+
                     var (h, v) = GetTextConnections(x, y, tiles);
 
                     var textMatch = new Match(tile, h, new TileData[0]);
@@ -259,6 +257,8 @@ namespace MatchEngine
                 for (var y = 0; y < height; y++)
                 {
                     var tile = tiles[x, y];
+
+                    if (tile.text == "null") continue;
 
                     var (h, v) = GetTextConnections(x, y, tiles);
 

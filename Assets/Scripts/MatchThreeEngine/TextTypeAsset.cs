@@ -5,7 +5,7 @@ namespace MatchEngine
     [CreateAssetMenu(menuName = "Match 3 Engine/Text Type Asset")]
     public sealed class TextTypeAsset : ScriptableObject
     {
-        public Text text;
+        public string text;
 
         public LogicType logicType;
 

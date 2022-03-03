@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d742e6c1f64287bcbf4ece0ac2dc56, type: 3}
   m_Name: Text_Prop_Dir_Up
   m_EditorClassIdentifier: 
-  text: 5
+  text: up
   logicType: 3
-  sprite: {fileID: 9094159515244924938, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}
+  sprite: {fileID: 1476627340757501905, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

@@ -15,7 +15,7 @@ namespace MatchEngine
             isLeaf = false;
             switch (_root.text)
             {
-                case Text.isText:
+                case "is":
                     if (_lParam.logicType == LogicType.obj &&
                         _rParam.logicType == LogicType.obj)
                     {
@@ -32,7 +32,7 @@ namespace MatchEngine
                         logicType = LogicType.rule;
                     }
                     break;
-                case Text.and:
+                case "and":
                     if (_lParam.logicType == LogicType.obj &&
                         _rParam.logicType == LogicType.obj)
                     {
@@ -62,7 +62,7 @@ namespace MatchEngine
             lParam = null;
             rParam = _rParam;
             isLeaf = false;
-            if (_root.text == Text.not)
+            if (_root.text == "not")
             {
                 if (_rParam.logicType == LogicType.obj)
                 {

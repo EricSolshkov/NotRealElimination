@@ -332,21 +332,17 @@ namespace MatchEngine
 
                 foreach (var match in matches)
                 {
-                    if (match.textMatchFlag && match.tileMatchFlag)
+                    if (match.textMatchFlag && match.tileMatchFlag && match.text != "null")
                     {
-                        var tileName = Array.Find(tileTypes, tileType => tileType.name == match.name).name;
-                        var text = Array.Find(textTypes, textType => textType.text == match.text).name;
-                        OnMatch?.Invoke(tileName + " & " + text, match.Tiles.Length);
+                        OnMatch?.Invoke(match.name + " & " + match.text, match.Tiles.Length);
                     }
                     else if (match.tileMatchFlag)
                     {
-                        var tileName = Array.Find(tileTypes, tileType => tileType.name == match.name).name.ToString();
-                        OnMatch?.Invoke(tileName, match.Tiles.Length);
+                        OnMatch?.Invoke(match.name, match.Tiles.Length);
                     }
                     else if (match.textMatchFlag)
                     {
-                        var text = Array.Find(textTypes, textType => textType.text == match.text).text.ToString();
-                        OnMatch?.Invoke(text, match.Tiles.Length);
+                        OnMatch?.Invoke(match.text, match.Tiles.Length);
                     }
                 }
 
@@ -364,7 +360,32 @@ namespace MatchEngine
         private void Generate(Tile tile)
         {
             tile.TileAsset = tileTypes[Random.Range(0, tileTypes.Length)];
-            tile.TextAsset = textTypes[Random.Range(0, textTypes.Length)];
+            float textProbability = 0.5f;
+            if (Random.Range(0, 100) < textProbability * 100)
+            {
+                tile.TextAsset = textTypes[Random.Range(0, textTypes.Length)];
+
+                switch (tile.TileAsset.name)
+                {
+                    case "hydro": 
+                        tile.TextAsset = textTypes[9];
+                        break;
+                    case "pyro":
+                        tile.TextAsset = textTypes[10];
+                        break;
+                    case "dendro":
+                        tile.TextAsset = textTypes[11];
+                        break;
+                    case "photo":
+                        tile.TextAsset = textTypes[12];
+                        break;
+                    case "skoto":
+                        tile.TextAsset = textTypes[13];
+                        break;
+                    default: break;
+                }
+            }
+            else tile.TextAsset = textTypes[7];
         }
 
         private void Shuffle()

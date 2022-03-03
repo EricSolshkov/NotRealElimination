@@ -61,16 +61,16 @@ TextureImporter:
     second: 5-tiles_18
   - first:
       213: 4671418056550356347
-    second: DirLeftText
+    second: 5-tiles_19
   - first:
       213: -5110464378351347990
-    second: DirRightText
+    second: 5-tiles_20
   - first:
       213: -554767674091776102
-    second: DirUpText
+    second: 5-tiles_21
   - first:
       213: 3716614609006977671
-    second: DirDownText
+    second: 5-tiles_22
   - first:
       213: 1130436146118180725
     second: 5-tiles_23
@@ -79,13 +79,13 @@ TextureImporter:
     second: 5-tiles_24
   - first:
       213: -8255766429713366476
-    second: Num3Text
+    second: 5-tiles_25
   - first:
       213: 5119225423793119343
-    second: Num4Text
+    second: 5-tiles_26
   - first:
       213: 8665486577502868556
-    second: Num5Text
+    second: 5-tiles_27
   - first:
       213: -4729748816738079337
     second: 5-tiles_28
@@ -113,6 +113,255 @@ TextureImporter:
   - first:
       213: 8017977668388080844
     second: 5-tiles_36
+  - first:
+      213: 8640907237543427690
+    second: 5-tiles_37
+  - first:
+      213: 9010625481410043027
+    second: 5-tiles_38
+  - first:
+      213: 8544705226262610601
+    second: 5-tiles_39
+  - first:
+      213: 1649020893855873127
+    second: 5-tiles_40
+  - first:
+      213: -6113899044448142300
+    second: 5-tiles_41
+  - first:
+      213: -5551881975395783811
+    second: 5-tiles_42
+  - first:
+      213: -7220336502821743126
+    second: 5-tiles_43
+  - first:
+      213: -7890197968976171077
+    second: 5-tiles_44
+  - first:
+      213: -2191907804889993722
+    second: 5-tiles_45
+  - first:
+      213: 100510097984900225
+    second: 5-tiles_46
+  - first:
+      213: -1791405834925992102
+    second: 5-tiles_47
+  - first:
+      213: -4452255642028721555
+    second: 5-tiles_48
+  - first:
+      213: 8685488819995333112
+    second: 5-tiles_49
+  - first:
+      213: -5152456117380197964
+    second: 5-tiles_50
+  - first:
+      213: 1531086528389633228
+    second: 5-tiles_51
+  - first:
+      213: 4046268042256480208
+    second: 5-tiles_52
+  - first:
+      213: -492356983486218227
+    second: 5-tiles_53
+  - first:
+      213: -5551934481244321994
+    second: 5-tiles_54
+  - first:
+      213: -1716191014304267734
+    second: 5-tiles_55
+  - first:
+      213: 8962090763619938911
+    second: 5-tiles_56
+  - first:
+      213: -4840285455196771646
+    second: 5-tiles_57
+  - first:
+      213: 1139227826636081881
+    second: 5-tiles_58
+  - first:
+      213: -1617003572236351872
+    second: 5-tiles_59
+  - first:
+      213: 2523577589145049662
+    second: 5-tiles_60
+  - first:
+      213: 1261652025486021055
+    second: 5-tiles_61
+  - first:
+      213: -2209245464561875797
+    second: 5-tiles_62
+  - first:
+      213: 1476627340757501905
+    second: 5-tiles_63
+  - first:
+      213: 1208955038167551930
+    second: 5-tiles_64
+  - first:
+      213: -3828588928484612712
+    second: 5-tiles_65
+  - first:
+      213: -8695208781174327989
+    second: 5-tiles_66
+  - first:
+      213: 6886021640691208700
+    second: 5-tiles_67
+  - first:
+      213: 9050097087424375775
+    second: 5-tiles_68
+  - first:
+      213: -1481695918167300360
+    second: 5-tiles_69
+  - first:
+      213: -7925650657729679833
+    second: 5-tiles_70
+  - first:
+      213: 3099631321813313760
+    second: 5-tiles_71
+  - first:
+      213: -2626792471079078040
+    second: 5-tiles_72
+  - first:
+      213: 7829292686589451164
+    second: 5-tiles_73
+  - first:
+      213: 2294465568337117989
+    second: 5-tiles_74
+  - first:
+      213: 5171248504473350352
+    second: 5-tiles_75
+  - first:
+      213: -5582161671451973426
+    second: 5-tiles_76
+  - first:
+      213: 2751532763188195184
+    second: 5-tiles_77
+  - first:
+      213: 5828995436258822137
+    second: 5-tiles_78
+  - first:
+      213: -864017037075113200
+    second: 5-tiles_79
+  - first:
+      213: -4938543143512101852
+    second: 5-tiles_80
+  - first:
+      213: 9146717275673956617
+    second: 5-tiles_81
+  - first:
+      213: 5567445105163407241
+    second: 5-tiles_82
+  - first:
+      213: 107296562774525176
+    second: 5-tiles_83
+  - first:
+      213: -8962624610057690233
+    second: 5-tiles_84
+  - first:
+      213: 3794643190970843939
+    second: 5-tiles_85
+  - first:
+      213: -5816506063775409460
+    second: 5-tiles_86
+  - first:
+      213: 9140120283688359251
+    second: 5-tiles_87
+  - first:
+      213: -3915166513651930674
+    second: 5-tiles_88
+  - first:
+      213: -4645820820501349034
+    second: 5-tiles_89
+  - first:
+      213: -454384091711934534
+    second: 5-tiles_90
+  - first:
+      213: -4039364787179648637
+    second: 5-tiles_91
+  - first:
+      213: -230167903066703040
+    second: 5-tiles_92
+  - first:
+      213: 4151947548929350185
+    second: 5-tiles_93
+  - first:
+      213: 1927719180290117984
+    second: 5-tiles_94
+  - first:
+      213: 6753511534315180162
+    second: 5-tiles_95
+  - first:
+      213: -7151217717876074321
+    second: 5-tiles_96
+  - first:
+      213: 6397261986712715017
+    second: 5-tiles_97
+  - first:
+      213: 3175928974426477745
+    second: 5-tiles_98
+  - first:
+      213: -1782080634809825421
+    second: 5-tiles_99
+  - first:
+      213: -6100960432848501598
+    second: 5-tiles_100
+  - first:
+      213: 6423644666672455473
+    second: 5-tiles_101
+  - first:
+      213: -3600937638884593958
+    second: 5-tiles_102
+  - first:
+      213: -348932851606060785
+    second: 5-tiles_103
+  - first:
+      213: -7818637091703502781
+    second: 5-tiles_104
+  - first:
+      213: -4972468876914882852
+    second: 5-tiles_105
+  - first:
+      213: 4502514885299069473
+    second: 5-tiles_106
+  - first:
+      213: -1713265033554288204
+    second: 5-tiles_107
+  - first:
+      213: 1881596581095002486
+    second: 5-tiles_108
+  - first:
+      213: 5679671364388513216
+    second: 5-tiles_109
+  - first:
+      213: 7961308260996837333
+    second: 5-tiles_110
+  - first:
+      213: -7656416461863473275
+    second: 5-tiles_111
+  - first:
+      213: -8731842731469262886
+    second: 5-tiles_112
+  - first:
+      213: 6178655352291172628
+    second: 5-tiles_113
+  - first:
+      213: 2380300520223436390
+    second: 5-tiles_114
+  - first:
+      213: 6648569150960565973
+    second: 5-tiles_115
+  - first:
+      213: 2657454413932435548
+    second: 5-tiles_116
+  - first:
+      213: 7366293917191987215
+    second: 5-tiles_117
+  - first:
+      213: 2127353556704230157
+    second: 5-tiles_118
+  - first:
+      213: 7580457800569742786
+    second: 5-tiles_119
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -311,9 +560,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 645
-        y: 1020
+        y: 957
         width: 118
-        height: 55
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,8 +580,8 @@ TextureImporter:
       name: 5-tiles_7
       rect:
         serializedVersion: 2
-        x: 133
-        y: 829
+        x: 901
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -352,8 +601,8 @@ TextureImporter:
       name: 5-tiles_8
       rect:
         serializedVersion: 2
-        x: 5
-        y: 701
+        x: 1029
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -373,8 +622,8 @@ TextureImporter:
       name: 5-tiles_13
       rect:
         serializedVersion: 2
-        x: 5
-        y: 445
+        x: 1669
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -394,8 +643,8 @@ TextureImporter:
       name: 5-tiles_6
       rect:
         serializedVersion: 2
-        x: 5
-        y: 829
+        x: 773
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -415,8 +664,8 @@ TextureImporter:
       name: 5-tiles_9
       rect:
         serializedVersion: 2
-        x: 5
-        y: 573
+        x: 1157
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -436,8 +685,8 @@ TextureImporter:
       name: 5-tiles_10
       rect:
         serializedVersion: 2
-        x: 133
-        y: 573
+        x: 1285
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -457,8 +706,8 @@ TextureImporter:
       name: 5-tiles_11
       rect:
         serializedVersion: 2
-        x: 261
-        y: 573
+        x: 1413
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -478,8 +727,8 @@ TextureImporter:
       name: 5-tiles_12
       rect:
         serializedVersion: 2
-        x: 389
-        y: 573
+        x: 1541
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -499,8 +748,8 @@ TextureImporter:
       name: 5-tiles_14
       rect:
         serializedVersion: 2
-        x: 133
-        y: 445
+        x: 1797
+        y: 957
         width: 118
         height: 118
       alignment: 0
@@ -520,8 +769,8 @@ TextureImporter:
       name: 5-tiles_15
       rect:
         serializedVersion: 2
-        x: 261
-        y: 445
+        x: 5
+        y: 829
         width: 118
         height: 118
       alignment: 0
@@ -541,12 +790,12 @@ TextureImporter:
       name: 5-tiles_16
       rect:
         serializedVersion: 2
-        x: 645
+        x: 133
         y: 829
         width: 118
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,6 +803,2169 @@ TextureImporter:
       bones: []
       spriteID: 9c17eacc92f66b3d0800000000000000
       internalID: -3191241060627090999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_17
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2cb84d05453e100800000000000000
+      internalID: 136045119891292918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_18
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d82e172cfdea5ee0800000000000000
+      internalID: -1271442277534914349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_19
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b759702e8f534d040800000000000000
+      internalID: 4671418056550356347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_20
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6941b69bbf319b0800000000000000
+      internalID: -5110464378351347990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_21
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97d3ec5db11d48f0800000000000000
+      internalID: -554767674091776102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_22
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78263e0ab41149330800000000000000
+      internalID: 3716614609006977671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_23
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fb2a28fad10bf00800000000000000
+      internalID: 1130436146118180725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_24
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675e6784251c9c500800000000000000
+      internalID: 417076999655712118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_25
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43207505c20ad6d80800000000000000
+      internalID: -8255766429713366476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_26
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60665e66642b0740800000000000000
+      internalID: 5119225423793119343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_27
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4459f9612ef14870800000000000000
+      internalID: 8665486577502868556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_28
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79da08da28e8c5eb0800000000000000
+      internalID: -4729748816738079337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_29
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 829
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf1b80d9b92e42c0800000000000000
+      internalID: -4445569904123633718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1317f729773b592a0800000000000000
+      internalID: -6731276741895032527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_31
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af640357714868b30800000000000000
+      internalID: 4289260931402188538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_32
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84c77af4d20db660800000000000000
+      internalID: 7403076476225438862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_33
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efbd98c92e3704c0800000000000000
+      internalID: -4321416968258338841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_34
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b032818c0900f7890800000000000000
+      internalID: -7458241836069936373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_35
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc971cafb4db85f90800000000000000
+      internalID: -6964608689701291569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_36
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc49455534954f60800000000000000
+      internalID: 8017977668388080844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_37
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eb0eed95baae770800000000000000
+      internalID: 8640907237543427690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_38
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c578f822c2c0d70800000000000000
+      internalID: 9010625481410043027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_39
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a28ec9a124e49670800000000000000
+      internalID: 8544705226262610601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_40
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768f97d14cf72e610800000000000000
+      internalID: 1649020893855873127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_41
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c711f3631172ba0800000000000000
+      internalID: -6113899044448142300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_42
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7be3ad22c0c3f2b0800000000000000
+      internalID: -5551881975395783811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_43
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae51686a4363ccb90800000000000000
+      internalID: -7220336502821743126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_44
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 701
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfaaa350c2608290800000000000000
+      internalID: -7890197968976171077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_45
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e2025f677c491e0800000000000000
+      internalID: -2191907804889993722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_46
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ccabec665156100800000000000000
+      internalID: 100510097984900225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_47
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a579ca862e5a327e0800000000000000
+      internalID: -1791405834925992102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_48
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a36a725196632c0800000000000000
+      internalID: -4452255642028721555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_49
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1d278601e098870800000000000000
+      internalID: 8685488819995333112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_50
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1d3cac57cce78b0800000000000000
+      internalID: -5152456117380197964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_51
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4dc05e5138f3510800000000000000
+      internalID: 1531086528389633228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_52
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d776bca85b372830800000000000000
+      internalID: 4046268042256480208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_53
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d000f90aeebca29f0800000000000000
+      internalID: -492356983486218227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_54
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6378035310193f2b0800000000000000
+      internalID: -5551934481244321994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_55
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a224da18d5dde28e0800000000000000
+      internalID: -1716191014304267734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_56
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52306af01ebf5c70800000000000000
+      internalID: 8962090763619938911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_57
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caa18ff50ad3dcb0800000000000000
+      internalID: -4840285455196771646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_58
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da42e42ca95fcf00800000000000000
+      internalID: 1139227826636081881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_59
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 573
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086805c71df3f89e0800000000000000
+      internalID: -1617003572236351872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_60
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a9024627c850320800000000000000
+      internalID: 2523577589145049662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_61
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb11f3925d9428110800000000000000
+      internalID: 1261652025486021055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_62
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4852f74fe2751e0800000000000000
+      internalID: -2209245464561875797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_63
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d70b7f2eb80e7410800000000000000
+      internalID: 1476627340757501905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_64
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf456fa33217c010800000000000000
+      internalID: 1208955038167551930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_65
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8956eae77ae1edac0800000000000000
+      internalID: -3828588928484612712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_66
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b453f36cea9645780800000000000000
+      internalID: -8695208781174327989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_67
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf15d01d230109f50800000000000000
+      internalID: 6886021640691208700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_68
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb2abef957689d70800000000000000
+      internalID: 9050097087424375775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_69
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6ed7ca965ff6be0800000000000000
+      internalID: -1481695918167300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_70
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e6e2cf7be620290800000000000000
+      internalID: -7925650657729679833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_71
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e86b5fb34a140b20800000000000000
+      internalID: 3099631321813313760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_72
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86739a63a22cb8bd0800000000000000
+      internalID: -2626792471079078040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_73
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b5ab2973c37ac60800000000000000
+      internalID: 7829292686589451164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_74
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 445
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523491e174497df10800000000000000
+      internalID: 2294465568337117989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_75
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0776acd17f3c740800000000000000
+      internalID: 5171248504473350352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_76
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8ed4e098d2882b0800000000000000
+      internalID: -5582161671451973426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_77
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f6ea948786f2620800000000000000
+      internalID: 2751532763188195184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_78
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f784974770c4e050800000000000000
+      internalID: 5828995436258822137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_79
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b904125156204f0800000000000000
+      internalID: -864017037075113200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_80
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c250f2d25c67bb0800000000000000
+      internalID: -4938543143512101852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_81
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901997d96eaafee70800000000000000
+      internalID: 9146717275673956617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_82
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f80c753d9834d40800000000000000
+      internalID: 5567445105163407241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_83
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4cbc5c7a13d7100800000000000000
+      internalID: 107296562774525176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_84
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7836656376c5e9380800000000000000
+      internalID: -8962624610057690233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_85
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3230c2790e749a430800000000000000
+      internalID: 3794643190970843939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_86
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccad2ca5d8e974fa0800000000000000
+      internalID: -5816506063775409460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_87
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3555699b8fa38de70800000000000000
+      internalID: 9140120283688359251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_88
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9a54d9cc88aa9c0800000000000000
+      internalID: -3915166513651930674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_89
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 317
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d37ef049ab68fb0800000000000000
+      internalID: -4645820820501349034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_90
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfebe57314b1b9f0800000000000000
+      internalID: -454384091711934534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_91
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3898fe5a02b41f7c0800000000000000
+      internalID: -4039364787179648637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_92
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b330bf2874eccf0800000000000000
+      internalID: -230167903066703040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_93
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92adcfb3c4eae9930800000000000000
+      internalID: 4151947548929350185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_94
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06156e78162a0ca10800000000000000
+      internalID: 1927719180290117984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_95
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2801c5575fa49bd50800000000000000
+      internalID: 6753511534315180162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_96
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa85486df55c1cc90800000000000000
+      internalID: -7151217717876074321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_97
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ffe1df1e3a7c850800000000000000
+      internalID: 6397261986712715017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_98
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b49f80539a231c20800000000000000
+      internalID: 3175928974426477745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_99
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377ce01ca17c447e0800000000000000
+      internalID: -1782080634809825421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_100
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a40a538fc8055ba0800000000000000
+      internalID: -6100960432848501598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_101
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f18585ace552950800000000000000
+      internalID: 6423644666672455473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_102
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade23f7cb46e60ec0800000000000000
+      internalID: -3600937638884593958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_103
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f018e819b67582bf0800000000000000
+      internalID: -348932851606060785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_104
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 189
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348c1517dfe9e7390800000000000000
+      internalID: -7818637091703502781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_105
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd68dc6d6ed3efab0800000000000000
+      internalID: -4972468876914882852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_106
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122e82ece652c7e30800000000000000
+      internalID: 4502514885299069473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_107
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b126ec77824938e0800000000000000
+      internalID: -1713265033554288204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_108
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671d1c21f16cc1a10800000000000000
+      internalID: 1881596581095002486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_109
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5e553830f32de40800000000000000
+      internalID: 5679671364388513216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_110
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df691cbeaf3c7e60800000000000000
+      internalID: 7961308260996837333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_111
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fac2a1bc1feb590800000000000000
+      internalID: -7656416461863473275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_112
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfa23c8c4342d680800000000000000
+      internalID: -8731842731469262886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_113
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411a1e69e4efeb550800000000000000
+      internalID: 6178655352291172628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_114
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e689636b6880120800000000000000
+      internalID: 2380300520223436390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_115
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5deff9bca66744c50800000000000000
+      internalID: 6648569150960565973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_116
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c589c3da5bc21e420800000000000000
+      internalID: 2657454413932435548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_117
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0069551a455a3660800000000000000
+      internalID: 7366293917191987215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_118
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bf403e9c0e58d10800000000000000
+      internalID: 2127353556704230157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5-tiles_119
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 61
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c56cc5e432333960800000000000000
+      internalID: 7580457800569742786
       vertices: []
       indices: 
       edges: []

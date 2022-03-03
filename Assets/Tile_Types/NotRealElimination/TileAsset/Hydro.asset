@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e715a09bece758b4c888c1395d4c1d07, type: 3}
   m_Name: Hydro
   m_EditorClassIdentifier: 
-  name: 0
-  sprite: {fileID: 1665862387441779375, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}
+  name: hydro
+  sprite: {fileID: -5571283583525768926, guid: 19dfeba9d1ba20d4088915755b55fa77, type: 3}

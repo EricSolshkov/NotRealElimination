@@ -41,17 +41,17 @@
         public readonly int X;
         public readonly int Y;
 
-        public readonly TileName tileName;
-        public readonly Text text;
+        public readonly string tileName;
+        public readonly string text;
         public readonly LogicType logicType;
 
-        public TileData(int x, int y, TileName typeId, Text textId, LogicType _type)
+        public TileData(int x, int y, string _tile, string _text, LogicType _type)
         {
             X = x;
             Y = y;
 
-            tileName = typeId;
-            text = textId;
+            tileName = _tile;
+            text = _text;
             logicType = _type;
         }
     }
