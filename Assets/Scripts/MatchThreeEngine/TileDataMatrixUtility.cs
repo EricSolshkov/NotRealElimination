@@ -106,40 +106,6 @@ namespace MatchEngine
             return (horizontalConnections.ToArray(), verticalConnections.ToArray());
         }
 
-        /*public static Match FindBestMatch(TileData[,] tiles)
-        {
-            var bestMatch = default(Match);
-
-            for (var y = 0; y < tiles.GetLength(1); y++)
-            {
-                for (var x = 0; x < tiles.GetLength(0); x++)
-                {
-                    var tile = tiles[x, y];
-                }
-            }
-            return bestMatch;
-        }*/
-
-        /*public static List<Match> FindAllMatches(TileData[,] tiles)
-        {
-            var matches = new List<Match>(); 
-
-            for (var y = 0; y < tiles.GetLength(1); y++)
-            {
-                bool isConnectionDetected = false;
-                for (var x = 0; x < tiles.GetLength(0); x++)
-                {
-                    var tile = tiles[x, y];
-                    if (!isConnectionDetected)
-                    {
-
-                    }
-
-                }
-            }
-            return matches;
-        }*/
-
         public static Match FindBestMatch(TileData[,] tiles)
         {
             var bestMatch = default(Match);
