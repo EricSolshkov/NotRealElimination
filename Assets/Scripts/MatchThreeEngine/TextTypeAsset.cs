@@ -3,6 +3,7 @@
 namespace MatchEngine
 {
     [CreateAssetMenu(menuName = "Match 3 Engine/Text Type Asset")]
+    [System.Serializable]
     public sealed class TextTypeAsset : ScriptableObject
     {
         public string text;

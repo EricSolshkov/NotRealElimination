@@ -19246,6 +19246,7 @@ GameObject:
   - component: {fileID: 1949368230}
   - component: {fileID: 1949368231}
   - component: {fileID: 1949368235}
+  - component: {fileID: 1949368236}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -19514,3 +19515,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 3
   m_AspectRatio: 1
+--- !u!114 &1949368236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949368228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42197bd0b49dc2444acc3622d9690b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileTypeContainer:
+  - {fileID: 11400000, guid: 44c978507030265418ed7ef4c4311706, type: 2}
+  - {fileID: 11400000, guid: c1dff6d77aac6e448a56bc2b29440080, type: 2}
+  - {fileID: 11400000, guid: e2883295126113647bb5ab971619f757, type: 2}
+  - {fileID: 11400000, guid: 4532975d05dc5bb48812485e1dcc6bba, type: 2}
+  - {fileID: 11400000, guid: 3448321a34eed0d4cb04a03854e2bd13, type: 2}
+  textTypeContainer:
+  - {fileID: 11400000, guid: e143d812ccb3e5d4f9d6cdacd49cb87d, type: 2}
+  - {fileID: 11400000, guid: 83584566035909746a2d492597cdd6f4, type: 2}
+  - {fileID: 11400000, guid: 095ae1473c84ff44e93f049da50ed1b5, type: 2}
+  - {fileID: 11400000, guid: 1bf1929e47ad5d646888567adace2bf8, type: 2}
+  - {fileID: 11400000, guid: 686e1f5919312624da9b0bec4397d508, type: 2}
+  - {fileID: 11400000, guid: 986c4d9a9184e1547910bc587f33a880, type: 2}
+  - {fileID: 11400000, guid: 7932a30a2eea00d49bd076fd480a32c4, type: 2}
+  - {fileID: 11400000, guid: 7a51e91788347fc479c606d3c18ca7f1, type: 2}
+  - {fileID: 11400000, guid: 929e87d720b395146b14bf44594075aa, type: 2}
+  - {fileID: 11400000, guid: 13e2c60057ed9d140b4a3a3f67d5d36e, type: 2}
+  - {fileID: 11400000, guid: 10a82bf670cad2342a66484b3a1a3bec, type: 2}
+  - {fileID: 11400000, guid: 28dd13f57c9b0434e91308b2a342acd8, type: 2}
+  - {fileID: 11400000, guid: 196cb639114d8634cb99d544d493e023, type: 2}
+  - {fileID: 11400000, guid: 26b2eaaf5d2af30479d81f651e4352a3, type: 2}
+  - {fileID: 11400000, guid: 78314c5c4ee9d3e468e6a60c5b3a5cf2, type: 2}
+  - {fileID: 11400000, guid: 7610a006f494d0b499c608ea92189ddc, type: 2}
+  - {fileID: 11400000, guid: 754d60ff7d00f3148860d537163ed234, type: 2}
+  - {fileID: 11400000, guid: 3a254afbb5cd647449ab8af7becdd660, type: 2}
+  - {fileID: 11400000, guid: d6c8d6536f88e2144be868116a9ebaab, type: 2}
+  - {fileID: 11400000, guid: ebcc0187317c6664fbca9b32af4d0420, type: 2}
+  - {fileID: 11400000, guid: 0d4b85a00bbfea24ea80ebb2338d4928, type: 2}
+  - {fileID: 11400000, guid: 8e9f4ba6fcf323148b2b6633eef66b86, type: 2}
+  - {fileID: 11400000, guid: 630dcac60a3489640a9bbe5be6069c42, type: 2}
+  - {fileID: 11400000, guid: e419f3668901dcd4dbed432f8681201f, type: 2}
+  - {fileID: 11400000, guid: 0d0b6954eddf2bc4e99f025396055d7c, type: 2}
+  - {fileID: 11400000, guid: 668039c04e38b234ba34d621f626438f, type: 2}
+  - {fileID: 11400000, guid: 4bc454951c807644c9228c14a9960264, type: 2}
+  - {fileID: 11400000, guid: 8449806f019bd114299f886e8adb436d, type: 2}
+  objTextContainer: []
+  opTextContainer: []
+  propTextContainer: []
