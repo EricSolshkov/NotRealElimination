@@ -2,3 +2,14 @@
 1.能否使用一个继承Editor的脚本创建一个可以同时显示所有Asset的Inspector
 2.能否使用一个脚本创建并维护一个公开的类数组，自动囊括指定文件夹下的所有Asset 该过程称为Asset的动态加载
 -动态加载可分为两种方式：Resource.Load()、AssetBundle(AB包)。
+
+通过[CustomPrepertyDrawer(typeof(T))]修饰的继承于PropertyDrawer的公有类，可以通过重写其方法改变类T在Inspector中的显示方式：
+1、重写GetPropertyHeight方法，返回需要的浮点数，可以定制类T被序列化后显示所占的像素高度。
+2、重写OnGUI方法，可以定制显示类T的具体布局。
+
+
+SerializedProperty不能直接获得其对应的property内容，需要访问.xxValue以获得具体对象。
+通过serializedProperty.objectReferenceValue获得的对象可以作为SerializedObject的构造函数参数。
+可以通过访问serializedObject.FindProperty("propertyName")过得序列化对象的序列化属性。、
+
+可以通过SerializedProperty.Next(bool isEnterChildren)方法访问下一个property(参数false)/子property(参数true)返回值为是否存在可访问的property。
